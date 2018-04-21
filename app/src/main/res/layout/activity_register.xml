@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@drawable/bgg"
+    android:layout_height="match_parent"
+    tools:context="souk.arab.com.soukelarab.RegisterActivity">
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txt_creataccount"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:drawableRight="@drawable/ic_arrow"
+        android:drawablePadding="5dp"
+        android:textSize="13sp"
+
+        android:text="تسجيل الدخول الي التطبيق"
+        android:layout_height="wrap_content" />
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txt_chooseAccount"
+        android:layout_width="wrap_content"
+       android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txt_creataccount"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="25dp"
+        android:textSize="13sp"
+        android:text="إختر نوع الحساب"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/ripple_client"
+        android:layout_marginTop="15dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/txt_chooseAccount"
+        android:layout_width="148dp"
+        android:gravity="center"
+       android:background="@drawable/ic_client"
+        android:layout_height="148dp">
+        <ConstantClasss.Custom_Textview
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:text="عميل"
+            android:drawablePadding="10dp"
+            android:textSize="13sp"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/ripple_servant"
+        android:layout_below="@+id/ripple_client"
+        android:layout_width="148dp"
+        android:layout_height="148dp"
+        android:background="@drawable/ic_client"
+
+        >
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:text="مقدم خدمة"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:textSize="13sp"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ripple_delivery"
+        android:layout_below="@+id/ripple_client"
+        android:layout_alignParentRight="true"
+        android:layout_width="148dp"
+        android:gravity="center"
+        android:background="@drawable/ic_client"
+        android:layout_height="148dp"
+    >
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            android:text="مندوب توصيل"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:textSize="13sp"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ripple_login"
+        android:layout_below="@+id/ripple_delivery"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layoutDirection="ltr"
+        android:layout_margin="10dp"
+        android:padding="8dp"
+        android:background="@drawable/button_shap"
+        android:layout_height="wrap_content"
+     >
+
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/txt_haveaccount"
+            android:text=" سجل دخول"
+            android:layout_marginRight="2dp"
+            android:textSize="13sp"
+            android:textColor="@android:color/white"
+            />
+        <ConstantClasss.Custom_Textview
+            android:id="@+id/txt_haveaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="لديك حساب بالفعل ؟ "
+            android:textSize="13sp"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+</RelativeLayout>

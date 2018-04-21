@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@drawable/bgg"
+    android:layout_height="match_parent"
+    tools:context="souk.arab.com.soukelarab.LoginActivity">
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txt_signin"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="25dp"
+        android:textSize="13sp"
+
+        android:text="تسجيل الدخول الي التطبيق"
+        android:layout_height="wrap_content" />
+<ImageView
+    android:id="@+id/img_logo"
+    android:layout_width="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="55dp"
+    android:layout_below="@+id/txt_signin"
+    android:background="@drawable/logo"
+    android:layout_height="wrap_content" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_email"
+        android:layout_width="match_parent"
+        android:theme="@style/AppThemeedittextnew"
+        android:layout_below="@+id/img_logo"
+        android:layout_margin="20dp"
+        android:layoutDirection="rtl"
+        android:layout_height="wrap_content">
+
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textSize="13sp"
+            android:drawableRight="@drawable/ic_phone"
+            android:drawablePadding="5dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:hint="رقم الهاتف" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/input_layout_email"
+        android:theme="@style/AppThemeedittextnew"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+
+    <ConstantClasss.Custom_EditText
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textSize="13sp"
+        android:drawableRight="@drawable/ic_password"
+        android:drawablePadding="5dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:password="true"
+        android:hint="كلمة المرور" />
+    </android.support.design.widget.TextInputLayout>
+    <RelativeLayout
+        android:layout_below="@+id/input_layout_password"
+        android:id="@+id/lin"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txt_forgetPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="13sp"
+
+        android:text="نسيت كلمه المرور؟"
+        android:textColor="@android:color/white"
+        />
+        <LinearLayout
+            android:id="@+id/ripple_login"
+
+            android:gravity="center"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_login"
+            android:layout_height="wrap_content"
+            >
+            <ConstantClasss.Custom_Textview
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+
+                android:text="تسجيل دخول"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ripple_creatAccount"
+        android:layout_below="@+id/lin"
+        android:layout_width="match_parent"
+       android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="onClick"
+        android:paddingLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/button_shap"
+        android:layout_height="wrap_content"
+       >
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:textSize="13sp"
+            android:text="إنشاء حساب جديد"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+</RelativeLayout>

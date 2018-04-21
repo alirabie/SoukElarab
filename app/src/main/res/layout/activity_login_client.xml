@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bgg"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent"
+    tools:context="souk.arab.com.soukelarab.LoginActivity">
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txt_signin"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/white"
+        android:drawableRight="@drawable/ic_arrow"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="25dp"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:text="إنشاء حسب عميل"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/txt_signin"
+        android:background="@drawable/logo"
+        android:layout_height="wrap_content" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_email"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/img_logo"
+       android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:theme="@style/AppThemeedittextnew"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textSize="13sp"
+            android:drawableRight="@drawable/ic_person"
+            android:drawablePadding="5dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:hint="إسم المستخدم" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_phone"
+        android:theme="@style/AppThemeedittextnew"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/input_layout_email"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="13sp"
+            android:drawableRight="@drawable/ic_phone"
+            android:drawablePadding="5dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:hint="رقم الهاتف" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:theme="@style/AppThemeedittextnew"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/input_layout_phone"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="13sp"
+            android:drawableRight="@drawable/ic_password"
+            android:drawablePadding="5dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:password="true"
+            android:hint="كلمة المرور" />
+    </android.support.design.widget.TextInputLayout>
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/check_agree"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:layout_marginRight="20dp"
+        android:textSize="13sp"
+        android:textColor="@color/darkyellow"
+        android:text="اوافق علي الشروط والأحكام"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/input_layout_password"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ripple_lgin"
+        android:layout_below="@+id/check_agree"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="onClick"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:background="@drawable/button_shap"
+        android:layout_height="wrap_content"
+     >
+
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ripple_lgin"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="تسجيل"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+</RelativeLayout>

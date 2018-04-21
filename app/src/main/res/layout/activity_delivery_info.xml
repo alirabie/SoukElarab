@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bgg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context="souk.arab.com.soukelarab.DeliveryInfoActivity">
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txt_signin"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="13sp"
+
+        android:drawableRight="@drawable/ic_arrow"
+        android:drawablePadding="5dp"
+        android:text="إنشاء حساب مندوب التوصيل"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/img_step3"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txt_signin"
+        android:background="@drawable/ic_step3"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_below="@+id/img_step3"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/linname"
+        android:layout_marginRight="20dp"
+        android:weightSum="1"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_secname"
+            android:layout_width="match_parent"
+
+            android:layout_gravity="right"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content">
+            <ConstantClasss.Custom_EditText
+                android:id="@+id/input_secname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:drawableRight="@drawable/ic_person"
+                android:drawablePadding="7dp"
+                android:text="الإسم الثاني"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_Fname"
+            android:layout_width="match_parent"
+
+            android:layout_marginLeft="15dp"
+            android:gravity="right"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content">
+            <ConstantClasss.Custom_EditText
+                android:id="@+id/input_Fname"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/ic_person"
+                android:drawablePadding="7dp"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="الاسم الاول"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_work"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/linname"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_work"
+            android:layout_width="match_parent"
+            android:drawableRight="@drawable/ic_home"
+            android:drawablePadding="7dp"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="جهة العمل"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.v7.widget.AppCompatSpinner
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:id="@+id/sp_carType"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:minHeight="50dp"
+        android:backgroundTint="@android:color/white"
+        android:layout_below="@+id/input_layout_work"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.AppCompatSpinner>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_color"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/sp_carType"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_color"
+            android:layout_width="match_parent"
+            android:drawableRight="@drawable/ic_car"
+            android:drawablePadding="7dp"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="لون السيارة"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_carNum"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/input_layout_color"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_num"
+            android:layout_width="match_parent"
+            android:drawableRight="@drawable/ic_car"
+            android:drawablePadding="7dp"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="رقم لوحة السيارة"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+
+        android:id="@+id/ripple_register"
+        android:layout_below="@+id/input_layout_carNum"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+
+        android:background="@drawable/button_shap"
+        android:layout_height="40dp"
+        >
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:textSize="13sp"
+            android:text="تسجيل"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>

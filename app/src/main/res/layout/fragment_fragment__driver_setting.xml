@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bgg"
+    android:layout_height="match_parent"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bgg"
+    android:layout_height="wrap_content">
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txtmain"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:textSize="13sp"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:text="القائمة الرئيسية" />
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtmain"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/logo"
+        android:layout_height="wrap_content" />
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txtDeliverName"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/img_logo"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="13sp"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:text="محمد احمد" />
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txtDeliverLocation"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/txtDeliverName"
+        android:textStyle="bold"
+        android:drawableRight="@drawable/ic_location"
+        android:drawablePadding="7dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="13sp"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:text="جدة" />
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/txtDeliverLocation"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:text="الحالة" />
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:background="@drawable/lin_shap_wh"
+        android:layout_below="@+id/txtStatus"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:layout_height="80dp">
+        <ConstantClasss.Custom_Textview
+            android:id="@+id/txt_available"
+            android:layout_width="wrap_content"
+            android:text="متاح"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@+id/txt_available"
+            android:layout_marginRight="70dp"
+            android:layout_centerVertical="true"
+            style="@style/AppTheme"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+        <ConstantClasss.Custom_Textview
+            android:id="@+id/txt_notavailable"
+            android:layout_width="wrap_content"
+            android:text="مشغول"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/grey"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+
+</LinearLayout>

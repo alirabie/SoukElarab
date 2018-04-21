@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+
+    android:layout_margin="5dp"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/white_shap"
+        android:layoutDirection="ltr">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bottom_shapp">
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+
+                    android:layout_gravity="center"
+                    android:layout_width="18dp"
+                    android:layout_height="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:paddingRight="3dp"
+                    android:src="@drawable/im1" />
+                <!--<com.like.LikeButton-->
+                    <!--android:id="@+id/star_button"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--app:icon_type="Star"-->
+                    <!--app:circle_start_color="@color/colorPrimary"-->
+                    <!--app:like_drawable="@drawable/im1"-->
+                    <!--app:unlike_drawable="@drawable/nott"-->
+                    <!--app:dots_primary_color="@color/colorAccent"-->
+                    <!--app:dots_secondary_color="@color/colorPrimary"-->
+                    <!--app:circle_end_color="@color/colorAccent"-->
+                    <!--app:icon_size="18sp"-->
+                    <!--app:liked="true"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--app:anim_scale_factor="2"-->
+                    <!--app:is_enabled="false"-->
+                    <!--/>-->
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5">
+
+                <ImageView
+                    android:layout_width="0.5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/line" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/im2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="0.5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/line" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/cart" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/image1" />
+            </RelativeLayout>
+
+            <ConstantClasss.Custom_Textview
+                android:id="@+id/txt_signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+
+                android:text=" هواوى 7 شريحه 2 جيجا رام شاشه 7 بوصه"
+                android:textColor="#a7a7a7"
+                android:textSize="8sp"
+                />
+
+            <com.whinc.widget.ratingbar.RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="110dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                app:rb_click_rating="false"
+                app:rb_count="5"
+                app:rb_empty="@drawable/empty"
+                app:rb_fill="@drawable/fill"
+                app:rb_max_count="5"
+                app:rb_space="2dp"
+                app:rb_touch_rating="false" />
+
+            <LinearLayout
+                android:id="@+id/ripple_lgin"
+                android:layout_width="115dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/check_agree"
+
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_shap"
+                android:gravity="center"
+                android:onClick="onClick"
+                >
+
+                <ConstantClasss.Custom_Textview
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ripple_lgin"
+                    android:layout_centerHorizontal="true"
+
+                    android:text="2500,000 SAR"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

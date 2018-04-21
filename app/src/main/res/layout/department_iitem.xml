@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:layoutDirection="ltr">
+
+            <!--<sa.baco.inroster.Utilites.RoundRectCornerImageView-->
+            <!--android:id="@+id/imageView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@drawable/recycletestt" />-->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/grop" />
+            <!--android:src="@drawable/recyclebg"-->
+            <ConstantClasss.Custom_Textview
+                android:layout_marginBottom="10dp"
+                android:id="@+id/txt_signin"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="موبيل وتابلت"
+                android:textColor="#ffffff"
+                android:textSize="13sp"
+                />
+        </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/lightgrey"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:id="@+id/relall"
+    android:layout_width="match_parent"
+    android:background="@color/wite"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/img_request"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+android:layout_centerInParent="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/logodriver"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/lin_name"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@+id/img_request"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <CheckedTextView
+            android:id="@+id/txtClientName"
+            android:layout_width="wrap_content"
+            android:text="محمد خالد"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/movebg"
+            android:layout_height="wrap_content" />
+        <CheckedTextView
+            android:id="@+id/txtorderTime"
+            android:layout_width="wrap_content"
+            android:text="9:90"
+            android:textSize="14sp"
+            android:drawablePadding="5dp"
+            android:layout_gravity="right"
+            android:drawableRight="@drawable/ic_alarm"
+            android:textColor="@color/darkgrey"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@+id/lin_name"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <CheckedTextView
+            android:id="@+id/txtClientlocation"
+            android:layout_width="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/ic_clentlocation"
+            android:text="جدة"
+            android:textSize="16sp"
+            android:layout_gravity="right"
+            android:textColor="@color/darkgrey"
+            android:layout_height="wrap_content" />
+        <CheckedTextView
+            android:id="@+id/txtorderdate"
+            android:layout_width="wrap_content"
+            android:text="22-3-3000"
+            android:drawablePadding="5dp"
+            android:layout_gravity="right"
+            android:drawableRight="@drawable/ic_date"
+            android:textSize="14sp"
+            android:textColor="@color/darkgrey"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

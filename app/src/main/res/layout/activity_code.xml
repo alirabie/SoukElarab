@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bgg"
+    android:layout_height="match_parent"
+    tools:context="souk.arab.com.soukelarab.codeActivity">
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txt_signin"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="25dp"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        android:drawableRight="@drawable/ic_arrow"
+        android:drawablePadding="5dp"
+        android:text="إنشاء حسب جديد"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/txt_signin"
+        android:background="@drawable/ic_code"
+        android:layout_height="wrap_content" />
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txt_entercode"
+        android:layout_width="wrap_content"
+      android:layout_centerHorizontal="true"
+        android:layout_below="@+id/img_logo"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="25dp"
+        android:textSize="13dp"
+
+        android:text="أدخل كود التفعيل المرسل الي هاتفك"
+        android:layout_height="wrap_content" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_code"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/txt_entercode"
+        android:layout_marginTop="10dp"
+        android:theme="@style/AppThemeedittextnew"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textSize="13sp"
+            android:password="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+             />
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+
+        android:id="@+id/ripple_confirm"
+        android:layout_below="@+id/input_layout_code"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:background="@drawable/button_shap"
+        android:layout_height="wrap_content"
+       >
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:textSize="13sp"
+            android:text="تفعيل"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txt_resend"
+        android:layout_below="@+id/ripple_confirm"
+        android:layout_marginTop="15dp"
+        android:textSize="13sp"
+        android:text="أعادة إرسال كود التفعيل"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="155dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/white"
+        android:layout_below="@+id/txt_resend"
+        android:layout_height="1dp" />
+</RelativeLayout>

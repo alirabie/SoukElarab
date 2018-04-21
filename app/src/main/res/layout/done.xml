@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/bgg"
+    android:layout_height="280dp">
+<ImageView
+    android:id="@+id/ic_done"
+    android:layout_width="100dp"
+    android:background="@drawable/ic_registerd"
+android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:layout_height="100dp" />
+   <CheckedTextView
+       android:id="@+id/txt_registerd"
+       android:layout_width="wrap_content"
+       android:layout_below="@+id/ic_done"
+       android:layout_marginTop="20dp"
+       android:textSize="18sp"
+       android:textStyle="bold"
+       android:visibility="gone"
+       android:textColor="@android:color/white"
+       android:text="تم إنشاء حسابك بنجاح"
+       android:layout_centerHorizontal="true"
+       android:layout_height="wrap_content" />
+    <CheckedTextView
+        android:id="@+id/txt_confirm"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/ic_done"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:maxLines="2"
+        android:textSize="13sp"
+        android:textColor="@android:color/white"
+        android:text="وسيتم تفعيل الحساب قريبا فور التأكد من صحة البيانات المدخلة عن طريق الإدرة"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/ripple_home"
+        android:layout_below="@+id/txt_confirm"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+
+
+        android:background="@drawable/button_shap"
+        android:layout_height="40dp"
+      >
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:textSize="13sp"
+            android:text="الذهاب الي الرئيسية"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+</RelativeLayout>

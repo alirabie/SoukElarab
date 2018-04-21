@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context="Fragments.NavigationDrawer">
+<RelativeLayout
+    android:layoutDirection="ltr"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txt_signin"
+        android:background="@drawable/logo"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+    <LinearLayout
+        android:background="#5c4392"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:padding="10dp"
+        android:gravity="end|center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_Textview
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:text="الأقسام"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@drawable/i3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="#5c4392"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:padding="10dp"
+        android:gravity="end|center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_Textview
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:text="التجار المفضلين"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@drawable/i2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="#5c4392"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:padding="10dp"
+        android:gravity="end|center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_Textview
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:text="الرسائل"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/i1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="#5c4392"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </LinearLayout>
+</LinearLayout>

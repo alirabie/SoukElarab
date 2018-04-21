@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey"
+    local:theme="@style/AppTheme"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/ic_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:padding="12dp"
+        android:layout_alignParentRight="true"
+     android:layout_centerInParent="true"
+        android:background="@drawable/ic_location"
+        />
+
+        <ImageButton
+            android:id="@+id/img_addtocart"
+            android:layout_width="wrap_content"
+            android:background="@drawable/ic_location"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/img_bestwish"
+            android:layout_width="wrap_content"
+            android:background="@drawable/ic_home"
+          android:layout_toLeftOf="@+id/img_addtocart"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+       <!-- <ImageButton
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:background="@drawable/back_ic"
+            />
+        <TextView
+            android:id="@+id/Txtcat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/ic_back"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:text=""
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+           android:text="AsiaStore"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+         android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/img_card"
+            android:layout_width="wrap_content"
+            android:background="@drawable/ic_card"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/img_compare"
+            android:layout_width="wrap_content"
+            android:background="@drawable/compare_icon"
+          android:layout_toLeftOf="@+id/img_card"
+     android:layout_marginRight="12dp"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/img_bestwish"
+            android:layout_width="wrap_content"
+            android:background="@drawable/ic_heart"
+      android:layout_toLeftOf="@+id/img_compare"
+            android:layout_marginRight="12dp"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@+id/img_bestwish"
+            android:layout_centerVertical="true"
+            android:searchIcon="@drawable/search_icon_btn"
+            android:layout_height="wrap_content">
+        </SearchView>
+       &lt;!&ndash; <TextView
+            android:id="@+id/txtwishcount"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:padding="2dp"
+            android:textSize="10dp"
+            android:background="@drawable/button_roundedwishlist"
+            android:layout_toLeftOf="@+id/img_bestwish"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="-10dp"
+            android:layout_height="wrap_content" />-->
+-->
+
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/lightgrey"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context="souk.arab.com.soukelarab.Requestdetails">
+<RelativeLayout
+android:id="@+id/relmap"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp">
+
+</RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_requestsdetails"
+        android:layout_below="@+id/relmap"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+android:layout_alignParentBottom="true"
+android:layout_marginBottom="10dp" android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_total"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:text="499"
+            android:textSize="16sp"
+            android:layout_weight=".5"
+            android:textColor="@color/movebg"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:textDirection="rtl"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content" />
+<ConstantClasss.Custom_Textview
+    android:layout_width="wrap_content"
+    android:text="إجمالي المجموع"
+    android:layout_weight=".5"
+    android:textSize="13sp"
+    android:textColor="@color/movebg"
+    android:layout_gravity="center|clip_horizontal"
+    android:layout_marginRight="30dp"
+    android:layout_marginLeft="5dp"
+    android:textDirection="rtl"
+    android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

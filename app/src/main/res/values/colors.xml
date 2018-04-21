@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4b3286</color>
+    <color name="colorPrimaryDark">#4b3286</color>
+    <color name="colorAccent">#4b3286</color>
+    <color name="darkMove">#4b3286</color>
+    <color name="lightMove">#4b3286</color>
+    <color name="movebg">#4b3286</color>
+    <color name="grey">#d2d2d2</color>
+    <color name="wite">#ffffff</color>
+    <color name="darkyellow">#eda92f</color>
+    <color name="bacground">#fff</color>
+    <color name="lightgrey">#f5f5f5</color>
+    <color name="darkgrey">#555555</color>
+    <color name="bggrey">#f6f6f6</color>
+    <color name="coloreActiv">#381e75</color>
+    <color name="notactove">#4b3286</color>
+
+</resources>

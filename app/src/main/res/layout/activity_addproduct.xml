@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/movebg"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/movebg"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="souk.arab.com.soukelarab.AddproductActivity">
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txt_signin"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="25dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/ic_arrow"
+        android:text="إضافة منتج"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/img_addproduct"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_addpics"
+        android:layout_height="wrap_content" />
+    <com.andexert.library.RippleView
+        android:id="@+id/ripple_add"
+        android:layout_width="wrap_content"
+        android:background="@drawable/bg_login"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+<Button
+    android:layout_width="wrap_content"
+    android:text="إضافة صوره للمنتج"
+    android:textSize="16sp"
+    android:textColor="@color/wite"
+    android:gravity="center"
+    android:background="@drawable/bg_login"
+    android:layout_height="wrap_content" />
+    </com.andexert.library.RippleView>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_productname"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/img_step1"
+        android:theme="@style/AppThemeedittextnew"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_productname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:drawableRight="@drawable/ic_proname"
+            android:drawablePadding="7dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:hint="إسم المنتج" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_price"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/img_step1"
+        android:theme="@style/AppThemeedittextnew"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:inputType="number"
+            android:singleLine="true"
+            android:drawableRight="@drawable/ic_price"
+            android:drawablePadding="7dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:hint="السعر" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/sp_coins"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:minHeight="50dp"
+        android:backgroundTint="@color/wite"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.AppCompatSpinner>
+    <TextView
+        android:id="@+id/txt_details"
+        android:layout_width="wrap_content"
+        android:gravity="right"
+        android:layout_gravity="right"
+        android:layout_marginTop="15dp"
+        android:text="التفاصيل"
+        android:layout_marginRight="25dp"
+        android:drawableRight="@drawable/ic_details"
+        android:drawablePadding="7dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_details"
+        android:layout_width="match_parent"
+        android:theme="@style/AppThemeedittextnew"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="right"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+
+    <ConstantClasss.Custom_EditText
+        android:id="@+id/input_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        />
+</android.support.design.widget.TextInputLayout>
+    <com.andexert.library.RippleView
+        android:id="@+id/ripple_addproduct"
+        android:layout_width="wrap_content"
+        android:background="@drawable/bg_login"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:text="إضافة منتج"
+            android:textSize="16sp"
+            android:textColor="@color/wite"
+            android:gravity="center"
+            android:background="@drawable/bg_login"
+            android:layout_height="wrap_content" />
+    </com.andexert.library.RippleView>
+</LinearLayout>
+</ScrollView>

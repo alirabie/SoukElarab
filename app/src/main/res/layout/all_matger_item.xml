@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+
+    android:layoutDirection="ltr"
+
+    android:layout_margin="3dp"
+    android:background="@drawable/white_shap"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+
+
+        android:gravity="end"
+        android:layout_marginTop="3dp"
+        android:layoutDirection="ltr">
+        <LinearLayout
+            android:layoutDirection="ltr"
+
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layoutDirection="ltr"
+                android:layout_gravity="end"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ConstantClasss.Custom_Textview
+                    android:gravity="start"
+                    android:layout_marginRight="10dp"
+                    android:textSize="13sp"
+                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:text="متجر باترز للدهات"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content" />
+                <ConstantClasss.Custom_Textview
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/des"
+                    android:layout_gravity="end"
+                    android:maxWidth="270dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="لاب ينوفو جديد عالى الجوده من حيث الرمات والبروسيسور حيث يحتوى على رمات عاليه الجودة بمواصفات عاليه جدا "
+                    android:textColor="#a1a1a1"
+                    android:textSize="8sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:weightSum="3"
+
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:layoutDirection="ltr"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_weight="1"
+
+
+                    android:gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+
+                        android:src="@drawable/ok"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true" />
+                </LinearLayout>
+                <LinearLayout
+
+android:layout_weight="1"
+
+
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ConstantClasss.Custom_Textview
+                        android:layout_marginRight="5dp"
+                        android:textColor="#616161"
+                        android:textSize="10dp"
+                        android:text="جدة"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/loc"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ConstantClasss.Custom_Textview
+                        android:layout_marginRight="5dp"
+                        android:textColor="#616161"
+                        android:textSize="10dp"
+                        android:text="35 منتج ف المتجر"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/imm"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_marginRight="5dp"
+            android:src="@drawable/bbts"
+            android:layout_width="62dp"
+            android:layout_height="62dp" />
+
+    </LinearLayout>
+    <RelativeLayout
+
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+        <RelativeLayout
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/ripple_lgin"
+            android:background="@drawable/button_shap"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/check_agree"
+
+
+            android:layout_gravity="end"
+
+
+            android:gravity="center"
+            android:onClick="onClick"
+            android:layout_alignParentRight="true">
+
+            <ConstantClasss.Custom_Textview
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+
+                android:text="مشاهدة"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/grey"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/bggrey"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/relall"
+            android:layout_width="match_parent"
+            android:background="@color/wite"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_request"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/logodriver"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/lin_name"
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@+id/img_request"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content">
+            <CheckedTextView
+                android:id="@+id/txtClientName"
+                android:layout_width="wrap_content"
+                android:text="محمد خالد"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginRight="25dp"
+                android:layout_gravity="right"
+                android:textColor="@color/movebg"
+                android:layout_height="wrap_content" />
+            <CheckedTextView
+                android:id="@+id/txtdisc"
+                android:layout_width="wrap_content"
+                android:text="هناك العديد من النصوص المتوفره لدي لوريم ابسوم"
+                android:textSize="13sp"
+                android:maxWidth="160dp"
+                android:maxLines="2"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right"
+                android:textColor="@color/darkgrey"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/txtdate"
+            android:layout_width="wrap_content"
+           android:background="@drawable/ic_fav"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/darkgrey"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linstatus"
+        android:layout_below="@+id/relall"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+        <CheckedTextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:text="الحالة"
+            android:textSize="13sp"
+            android:maxWidth="160dp"
+            android:maxLines="1"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="right"
+            android:textColor="@color/darkgrey"
+            android:layout_height="wrap_content" />
+        <CheckedTextView
+            android:id="@+id/txtStatusnum"
+            android:layout_width="wrap_content"
+            android:text="متاح"
+            android:textSize="13sp"
+            android:maxLines="1"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/ic_status"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="right"
+            android:textColor="@color/colorAccent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+        <TextView
+            android:id="@+id/txtv"
+            android:layout_width="1dp"
+            android:layout_toLeftOf="@+id/linstatus"
+            android:background="@color/grey"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/relall"
+            android:layout_marginTop="10dp"
+            android:layout_height="50dp" />
+        <LinearLayout
+            android:id="@+id/linlocation"
+            android:layout_below="@+id/relall"
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@+id/txtv"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+            <CheckedTextView
+                android:id="@+id/txtlocation"
+                android:layout_width="wrap_content"
+                android:text="الموقع"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right"
+                android:textColor="@color/darkgrey"
+                android:layout_height="wrap_content" />
+            <CheckedTextView
+                android:id="@+id/txtlocationname"
+                android:layout_width="wrap_content"
+                android:text="جدة"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/ic_locationfav"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right"
+                android:textColor="@color/colorAccent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txtvv"
+            android:layout_width="1dp"
+            android:layout_toLeftOf="@+id/linlocation"
+            android:background="@color/grey"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/relall"
+            android:layout_marginTop="10dp"
+            android:layout_height="50dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/relall"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+android:layout_alignParentLeft="true"
+            android:background="@drawable/bg_phone"
+            android:layout_height="wrap_content">
+
+        </Button>
+</RelativeLayout>
+</RelativeLayout>
