@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:scrollbars="none"
+    android:background="@drawable/bgg"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ConstantClasss.Custom_Textview
+            android:id="@+id/txt_signin"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="25dp"
+
+            android:textSize="13sp"
+            android:textStyle="bold"
+
+            android:drawablePadding="5dp"
+            android:text="تفاصيل المنتج"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/img_addpic"
+            android:layout_width="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/txt_signin"
+            android:background="@drawable/logo"
+            android:layout_height="100dp" />
+        <ConstantClasss.Custom_Textview
+            android:id="@+id/txt_addpic"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/img_addpic"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:text="إضافة صورة شخصية"
+            android:layout_height="wrap_content" />
+        <ConstantClasss.Custom_Textview
+            android:visibility="gone"
+            android:id="@+id/txt_addpicdes"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txt_addpic"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:text="هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص "
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/ripple_add"
+            android:layout_below="@+id/txt_addpicdes"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:background="@drawable/button_shap"
+            android:layout_height="wrap_content"
+            >
+            <ConstantClasss.Custom_Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:textSize="13sp"
+                android:text="تحديد المسافة للمتجر"
+                android:textColor="@android:color/white"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ripple_client"
+            android:layout_below="@+id/ripple_add"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:background="@drawable/button_shap"
+            android:layout_height="wrap_content"
+            >
+            <ConstantClasss.Custom_Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:textSize="13sp"
+                android:text="تحديد المسافة للعميل"
+                android:textColor="@android:color/white"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cancel"
+            android:layout_below="@+id/ripple_client"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:background="@drawable/butncance"
+            android:layout_height="wrap_content"
+            >
+            <ConstantClasss.Custom_Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:textSize="13sp"
+                android:text="هل تم توصيل الطلب"
+                android:textColor="@android:color/white"
+                />
+        </LinearLayout>
+        <ConstantClasss.Custom_Textview
+            android:visibility="gone"
+            android:id="@+id/txt_skip"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ripple_add"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"
+            android:text="تخطي"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="40dp"
+            android:layout_below="@+id/txt_skip"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            android:background="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_height="1dp" />
+        <LinearLayout
+
+            android:id="@+id/ordercome"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/cancel"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:id="@+id/no"
+android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:background="@drawable/button_shap"
+                android:layout_height="wrap_content"
+                >
+                <ConstantClasss.Custom_Textview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="5dp"
+                    android:textSize="13sp"
+                    android:text="لم يتم بعد"
+                    android:textColor="@android:color/white"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/yes"
+                android:layout_weight="0.5"
+                android:layout_below="@+id/ripple_add"
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:background="@drawable/button_shap"
+                android:layout_height="wrap_content"
+                >
+                <ConstantClasss.Custom_Textview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="5dp"
+                    android:textSize="13sp"
+                    android:text="نعم"
+                    android:textColor="@android:color/white"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

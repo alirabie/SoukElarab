@@ -1,0 +1,131 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context="Fragments.NavigationStore">
+    <RelativeLayout
+        android:layoutDirection="ltr"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txt_signin"
+            android:background="@drawable/logo"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="#5c4392"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:padding="10dp"
+        android:gravity="end|center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_Textview
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:text="إضافة منتج"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_marginTop="3dp"
+            android:layout_gravity="center"
+            android:src="@drawable/dr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="#5c4392"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:padding="10dp"
+        android:gravity="end|center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_Textview
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:text="طلبات العملاء"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@drawable/fthrre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="#5c4392"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:padding="10dp"
+        android:gravity="end|center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_Textview
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:text="مندوبين التوصيل"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/dtwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="#5c4392"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:padding="10dp"
+        android:gravity="end|center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_Textview
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:text="أعدادت المتجر"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/drfive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>

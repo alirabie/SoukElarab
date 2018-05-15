@@ -37,6 +37,7 @@
                 android:layout_height="wrap_content">
                 <ConstantClasss.Custom_Textview
                     android:gravity="start"
+                    android:id="@+id/name"
                     android:layout_marginRight="10dp"
                     android:textSize="13sp"
                     android:layout_gravity="end"
@@ -49,6 +50,8 @@
                     android:id="@+id/des"
                     android:layout_gravity="end"
                     android:maxWidth="270dp"
+                    android:maxHeight="300dp"
+                    android:layout_marginBottom="2dp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -60,8 +63,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:textDirection="ltr"
                 android:weightSum="3"
-
                 android:layout_gravity="end"
                 android:gravity="end"
                 android:layoutDirection="ltr"
@@ -70,13 +73,11 @@
                 android:layout_height="wrap_content">
                 <LinearLayout
                     android:layout_weight="1"
-
-
                     android:gravity="end"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView
-                        android:layout_alignParentEnd="true"
+                      android:layout_gravity="center"
 
                         android:src="@drawable/ok"
                         android:layout_width="20dp"
@@ -93,6 +94,7 @@ android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ConstantClasss.Custom_Textview
+                        android:id="@+id/loc"
                         android:layout_marginRight="5dp"
                         android:textColor="#616161"
                         android:textSize="10dp"
@@ -112,7 +114,8 @@ android:layout_weight="1"
                     android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <ConstantClasss.Custom_Textview
+                     <ConstantClasss.Custom_Textview
+                        android:id="@+id/proNum"
                         android:layout_marginRight="5dp"
                         android:textColor="#616161"
                         android:textSize="10dp"
@@ -129,11 +132,12 @@ android:layout_weight="1"
 
             </LinearLayout>
         </LinearLayout>
-        <ImageView
-            android:layout_marginRight="5dp"
-            android:src="@drawable/bbts"
-            android:layout_width="62dp"
-            android:layout_height="62dp" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ques_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+
+            />
 
     </LinearLayout>
     <RelativeLayout
@@ -148,7 +152,7 @@ android:layout_weight="1"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
-            android:id="@+id/ripple_lgin"
+
             android:background="@drawable/button_shap"
             android:layout_width="100dp"
             android:layout_height="30dp"
@@ -159,7 +163,7 @@ android:layout_weight="1"
 
 
             android:gravity="center"
-            android:onClick="onClick"
+
             android:layout_alignParentRight="true">
 
             <ConstantClasss.Custom_Textview

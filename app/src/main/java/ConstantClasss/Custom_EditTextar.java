@@ -11,7 +11,7 @@ import android.widget.EditText;
 public class Custom_EditTextar extends EditText {
     public Custom_EditTextar(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.setTypeface(Typeface.createFromAsset(context.getAssets(), "fonts/beirut.ttf"));
+        this.setTypeface(Typeface.createFromAsset(context.getAssets(), "fonts/cairofont.ttf"));
 
     }
 }

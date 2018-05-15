@@ -40,6 +40,7 @@
 
         <ConstantClasss.Custom_EditText
             android:id="@+id/input_email"
+            android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -66,6 +67,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:textSize="13sp"
+            android:singleLine="true"
             android:drawableRight="@drawable/ic_phone"
             android:drawablePadding="7dp"
             android:textColor="@android:color/white"
@@ -88,6 +90,7 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:textSize="13sp"
+            android:singleLine="true"
             android:drawableRight="@drawable/ic_password"
             android:drawablePadding="7dp"
             android:textColor="@android:color/white"
@@ -95,21 +98,37 @@
             android:password="true"
             android:hint="كلمة المرور" />
     </android.support.design.widget.TextInputLayout>
-    <CheckBox
+    <LinearLayout
         android:id="@+id/check_agree"
-        android:layout_width="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_marginRight="20dp"
-        android:theme="@style/RadioButton"
-        android:textSize="13sp"
-
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:textColor="@color/darkyellow"
-        android:text="اوافق علي الشروط والأحكام"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="end"
         android:layout_below="@+id/input_layout_password"
-        android:layout_height="wrap_content" />
+        android:layout_alignParentRight="true"
+        android:layout_width="match_parent"
+        android:layoutDirection="ltr"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:textColor="#cf8e40"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:text="اوافق علي الشروط والأحكام"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:theme="@style/MyCheckBox"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_below="@+id/input_layout_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textSize="13sp"
+            android:layout_alignParentRight="true" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ripple_next"
@@ -133,7 +152,6 @@
             android:textSize="13sp"
             android:drawablePadding="10dp"
             android:textStyle="bold"
-            android:drawableLeft="@drawable/ic_next"
             android:text="التالي"
             android:textColor="@android:color/white"
             />

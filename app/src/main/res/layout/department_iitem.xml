@@ -2,14 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-
     android:layoutDirection="ltr"
     android:orientation="vertical">
 
 
         <RelativeLayout
-            android:layout_width="170dp"
-            android:layout_height="130dp"
+
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
             android:layoutDirection="ltr">
 
             <!--<sa.baco.inroster.Utilites.RoundRectCornerImageView-->
@@ -20,22 +22,39 @@
             <!--android:src="@drawable/recycletestt" />-->
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/grop" />
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_width="274dp"
+                android:layout_height="197dp"
+               />
             <!--android:src="@drawable/recyclebg"-->
-            <ConstantClasss.Custom_Textview
-                android:layout_marginBottom="10dp"
-                android:id="@+id/txt_signin"
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+
                 android:layout_alignParentBottom="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:text="موبيل وتابلت"
-                android:textColor="#ffffff"
-                android:textSize="13sp"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <ConstantClasss.Custom_Textview
+
+                    android:id="@+id/txt_dept"
+                    android:maxWidth="200dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+
+                    android:text="موبيلي"
+                    android:textColor="@color/wite"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
         </RelativeLayout>
 
 

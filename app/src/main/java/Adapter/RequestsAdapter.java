@@ -65,7 +65,7 @@ RelativeLayout relall;
     }
     @Override
     public int getItemCount() {
-        return 6;
+        return faqModels.size();
     }
 
     public void setOnClickListener(OnItemClickListener onClickListener) {

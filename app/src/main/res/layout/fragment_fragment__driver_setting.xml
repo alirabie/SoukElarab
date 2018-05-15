@@ -1,13 +1,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bgg"
+
     android:layout_height="match_parent"
     >
 <RelativeLayout
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bgg"
+    android:background="@drawable/driverhimee"
     android:layout_height="wrap_content">
     <ConstantClasss.Custom_Textview
         android:id="@+id/txtmain"
@@ -21,15 +21,16 @@
         android:text="القائمة الرئيسية" />
     <ImageView
         android:id="@+id/img_logo"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/txtmain"
         android:layout_marginTop="10dp"
-        android:background="@drawable/logo"
-        android:layout_height="wrap_content" />
+        android:background="@drawable/cclele"
+        android:layout_height="70dp" />
     <ConstantClasss.Custom_Textview
         android:id="@+id/txtDeliverName"
         android:layout_width="wrap_content"
+        android:visibility="gone"
         android:layout_below="@+id/img_logo"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
@@ -43,8 +44,9 @@
         android:layout_width="wrap_content"
         android:layout_below="@+id/txtDeliverName"
         android:textStyle="bold"
-        android:drawableRight="@drawable/ic_location"
+        android:drawableRight="@drawable/location"
         android:drawablePadding="7dp"
+        android:visibility="gone"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textSize="13sp"
@@ -72,7 +74,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:orientation="horizontal"
-        android:layout_height="80dp">
+        android:layout_height="50dp">
         <ConstantClasss.Custom_Textview
             android:id="@+id/txt_available"
             android:layout_width="wrap_content"
@@ -80,15 +82,17 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="50dp"
             android:layout_centerInParent="true"
-            android:textColor="@color/colorAccent"
+            android:textColor="#ef3b7c"
             android:textSize="13sp"
             android:layout_height="wrap_content" />
         <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switchx"
             android:layout_width="wrap_content"
             android:layout_toLeftOf="@+id/txt_available"
             android:layout_marginRight="70dp"
             android:layout_centerVertical="true"
-            style="@style/AppTheme"
+            android:theme="@style/MySwitch"
+            android:checked="true"
             android:layout_centerInParent="true"
             android:layout_height="wrap_content" />
         <ConstantClasss.Custom_Textview

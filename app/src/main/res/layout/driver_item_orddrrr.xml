@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:layoutDirection="ltr"
+    android:id="@+id/relClick"
+    android:layout_margin="3dp"
+    android:background="@drawable/white_shap"
+    android:orientation="vertical">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+
+
+    android:gravity="end"
+    android:layout_marginTop="3dp"
+    android:layoutDirection="ltr">
+    <LinearLayout
+        android:layoutDirection="ltr"
+
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layoutDirection="ltr"
+            android:layout_gravity="end"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ConstantClasss.Custom_Textview
+                android:gravity="start"
+                android:id="@+id/name"
+                android:layout_marginRight="10dp"
+                android:textSize="13sp"
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:text="متجر باترز للدهات"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+            <ConstantClasss.Custom_Textview
+                android:layout_marginRight="10dp"
+                android:id="@+id/des"
+                android:layout_gravity="end"
+                android:maxWidth="270dp"
+                android:maxHeight="300dp"
+                android:layout_marginBottom="2dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="لاب ينوفو جديد عالى الجوده من حيث الرمات والبروسيسور حيث يحتوى على رمات عاليه الجودة بمواصفات عاليه جدا "
+                android:textColor="#a1a1a1"
+                android:textSize="8sp"
+                />
+
+            <ConstantClasss.Custom_Textview
+                android:layout_marginRight="10dp"
+                android:id="@+id/status"
+                android:layout_gravity="end"
+                android:maxWidth="270dp"
+                android:maxHeight="300dp"
+                android:layout_marginBottom="2dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="الحالة : "
+                android:textColor="#a1a1a1"
+                android:textSize="8sp"
+                />
+            <com.whinc.widget.ratingbar.RatingBar
+                android:id="@+id/ratingBar"
+                android:visibility="gone"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="90dp"
+                android:layout_height="15dp"
+                android:layout_gravity="end"
+                app:rb_click_rating="false"
+                app:rb_count="5"
+                app:rb_empty="@drawable/empty"
+                app:rb_fill="@drawable/fill"
+                app:rb_max_count="5"
+                app:rb_space="2dp"
+                app:rb_touch_rating="false" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:textDirection="ltr"
+            android:weightSum="3"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:layoutDirection="ltr"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/ok"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true" />
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ConstantClasss.Custom_Textview
+                    android:id="@+id/price"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#616161"
+                    android:textSize="10dp"
+                    android:text="1200 SAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ConstantClasss.Custom_Textview
+
+                    android:layout_marginRight="5dp"
+                    android:textColor="#616161"
+                    android:textSize="10dp"
+                    android:text="سعر النتج"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ConstantClasss.Custom_Textview
+                    android:id="@+id/proNum"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#616161"
+                    android:textSize="10dp"
+                    android:text="35 منتج ف المتجر"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ConstantClasss.Custom_Textview
+
+                    android:layout_marginRight="5dp"
+                    android:textColor="#616161"
+                    android:textSize="10dp"
+                    android:text="الكمية "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ques_image"
+        android:src="@drawable/placehodleer"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+
+        />
+
+</LinearLayout>
+    <RelativeLayout
+
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+
+            android:background="@drawable/button_shap"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/check_agree"
+
+
+            android:layout_gravity="end"
+
+
+            android:gravity="center"
+
+            android:layout_alignParentRight="true">
+
+            <ConstantClasss.Custom_Textview
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+
+                android:text="مشاهدة"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

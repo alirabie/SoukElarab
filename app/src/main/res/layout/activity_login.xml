@@ -14,7 +14,6 @@
         android:textColor="@android:color/white"
         android:layout_marginTop="25dp"
         android:textSize="13sp"
-
         android:text="تسجيل الدخول الي التطبيق"
         android:layout_height="wrap_content" />
 <ImageView
@@ -29,28 +28,34 @@
         android:id="@+id/input_layout_email"
         android:layout_width="match_parent"
         android:theme="@style/AppThemeedittextnew"
+
         android:layout_below="@+id/img_logo"
         android:layout_margin="20dp"
-        android:layoutDirection="rtl"
+
         android:layout_height="wrap_content">
 
         <ConstantClasss.Custom_EditText
+            android:textAlignment="textStart"
             android:id="@+id/input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
+            android:inputType="number"
+
             android:textSize="13sp"
+            android:theme="@style/AppThemeedittextnew"
             android:drawableRight="@drawable/ic_phone"
             android:drawablePadding="5dp"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
-            android:hint="رقم الهاتف" />
+            android:hint="رقم الهاتف"
+            android:gravity="start" />
     </android.support.design.widget.TextInputLayout>
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_layout_password"
         android:layout_width="match_parent"
-        android:layout_below="@+id/input_layout_email"
         android:theme="@style/AppThemeedittextnew"
+        android:layout_below="@+id/input_layout_email"
+
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_height="wrap_content">

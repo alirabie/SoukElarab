@@ -2,13 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="@color/lightgrey"
+    android:layoutDirection="rtl"
     android:layout_height="wrap_content">
-<RelativeLayout
+
+<LinearLayout
     android:id="@+id/relall"
     android:layout_width="match_parent"
     android:background="@color/wite"
-    android:layout_margin="10dp"
+    android:layoutDirection="rtl"
     android:padding="10dp"
+    android:weightSum="3"
+
     android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/img_request"
@@ -19,12 +23,14 @@ android:layout_centerInParent="true"
         android:background="@drawable/logodriver"
         android:layout_height="wrap_content" />
     <LinearLayout
+        android:layout_gravity="center"
         android:id="@+id/lin_name"
+        android:layout_weight="3"
         android:layout_width="wrap_content"
         android:layout_toLeftOf="@+id/img_request"
         android:orientation="vertical"
         android:layout_centerInParent="true"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="10dp"
         android:layout_height="wrap_content">
         <CheckedTextView
             android:id="@+id/txtClientName"
@@ -38,7 +44,7 @@ android:layout_centerInParent="true"
             android:id="@+id/txtorderTime"
             android:layout_width="wrap_content"
             android:text="9:90"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:drawablePadding="5dp"
             android:layout_gravity="right"
             android:drawableRight="@drawable/ic_alarm"
@@ -46,19 +52,25 @@ android:layout_centerInParent="true"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
+
+        android:layout_weight="1"
+        android:layout_gravity="end|center"
         android:layout_width="wrap_content"
-        android:layout_toLeftOf="@+id/lin_name"
+
         android:orientation="vertical"
-        android:layout_centerInParent="true"
-        android:layout_marginRight="20dp"
+
+
+
         android:layout_height="wrap_content">
         <CheckedTextView
             android:id="@+id/txtClientlocation"
             android:layout_width="wrap_content"
+
+
             android:drawablePadding="5dp"
             android:drawableRight="@drawable/ic_clentlocation"
             android:text="جدة"
-            android:textSize="16sp"
+            android:textSize="13sp"
             android:layout_gravity="right"
             android:textColor="@color/darkgrey"
             android:layout_height="wrap_content" />
@@ -67,11 +79,11 @@ android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:text="22-3-3000"
             android:drawablePadding="5dp"
-            android:layout_gravity="right"
+
             android:drawableRight="@drawable/ic_date"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:textColor="@color/darkgrey"
             android:layout_height="wrap_content" />
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>
 </RelativeLayout>

@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bgg"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+
+    tools:context="Fragments.Settings">
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_email"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/img_logo"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:theme="@style/Widget.Design.TextInputLayout"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textSize="13sp"
+
+            android:singleLine="true"
+            android:drawableRight="@drawable/ic_person"
+            android:drawablePadding="5dp"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="إسم المستخدم" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_phone"
+        android:theme="@style/Widget.Design.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/input_layout_email"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+
+            android:textSize="13sp"
+            android:singleLine="true"
+            android:drawableRight="@drawable/ic_phone"
+            android:drawablePadding="5dp"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="رقم الهاتف" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:theme="@style/Widget.Design.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/input_layout_phone"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="13sp"
+            android:drawableRight="@drawable/ic_password"
+            android:drawablePadding="5dp"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="@android:color/darker_gray"
+            android:password="true"
+            android:hint="كلمة المرور" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/ripple_lgin"
+        android:layout_below="@+id/check_agree"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:background="@drawable/button_shap"
+        android:layout_height="wrap_content"
+        >
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ripple_lgin"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="حفظ التعديلات"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+</LinearLayout>

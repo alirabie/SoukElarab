@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:textDirection="ltr"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@drawable/bgg"
+
+    android:gravity="center"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+
+        android:layout_width="270dp"
+        android:textDirection="ltr"
+        android:background="@drawable/lin_shap"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_Textview
+            android:id="@+id/txt_signin"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="25dp"
+            android:textSize="13sp"
+            android:text="إعادة تعين كلمة المرور"
+            android:layout_height="wrap_content" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_email"
+            android:layout_width="match_parent"
+            android:theme="@style/AppThemeedittextnew"
+
+            android:layout_below="@+id/img_logo"
+            android:layout_margin="20dp"
+
+            android:layout_height="wrap_content">
+
+            <ConstantClasss.Custom_EditText
+                android:textAlignment="textStart"
+                android:id="@+id/input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+
+                android:textSize="13sp"
+                android:theme="@style/AppThemeedittextnew"
+                android:drawableRight="@drawable/ic_phone"
+                android:drawablePadding="5dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:hint="رقم الهاتف"
+                android:gravity="start" />
+        </android.support.design.widget.TextInputLayout>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:id="@+id/ripple_creatAccount"
+            android:layout_below="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:onClick="onClick"
+
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:paddingRight="5dp"
+            android:background="@drawable/button_shap"
+            android:layout_height="wrap_content"
+            >
+            <ConstantClasss.Custom_Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:textSize="13sp"
+                android:text="إرسال"
+                android:textColor="@android:color/white"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

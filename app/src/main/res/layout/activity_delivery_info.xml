@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/bgg"
     android:layout_width="match_parent"
+    android:scrollbars="none"
     android:layout_height="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
     tools:context="souk.arab.com.soukelarab.DeliveryInfoActivity">
     <ConstantClasss.Custom_Textview
@@ -20,7 +20,6 @@
         android:layout_marginRight="30dp"
         android:layout_marginTop="20dp"
         android:textSize="13sp"
-
         android:drawableRight="@drawable/ic_arrow"
         android:drawablePadding="5dp"
         android:text="إنشاء حساب مندوب التوصيل"
@@ -46,7 +45,7 @@
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_layout_secname"
             android:layout_width="match_parent"
-
+            android:theme="@style/AppThemeedittextnew"
             android:layout_gravity="right"
             android:layout_weight=".5"
             android:layout_height="wrap_content">
@@ -55,9 +54,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
+
                 android:drawableRight="@drawable/ic_person"
                 android:drawablePadding="7dp"
-                android:text="الإسم الثاني"
+                android:singleLine="true"
+                android:hint="الإسم الثاني"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
                 />
@@ -66,7 +67,7 @@
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_layout_Fname"
             android:layout_width="match_parent"
-
+            android:theme="@style/AppThemeedittextnew"
             android:layout_marginLeft="15dp"
             android:gravity="right"
             android:layout_weight=".5"
@@ -78,7 +79,7 @@
                 android:drawablePadding="7dp"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
-                android:text="الاسم الاول"
+                android:hint="الاسم الاول"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
                 />
@@ -89,6 +90,7 @@
         android:layout_width="match_parent"
         android:layout_marginTop="5dp"
         android:layout_below="@+id/linname"
+        android:theme="@style/AppThemeedittextnew"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_height="wrap_content">
@@ -99,29 +101,54 @@
             android:drawablePadding="7dp"
             android:layout_height="wrap_content"
             android:textSize="13sp"
-            android:text="جهة العمل"
+            android:singleLine="true"
+            android:hint="جهة العمل"
+
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             />
     </android.support.design.widget.TextInputLayout>
-    <android.support.v7.widget.AppCompatSpinner
+
+
+<RelativeLayout
+    android:id="@+id/type"
+    android:layout_below="@+id/input_layout_work"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_marginRight="20dp"
-        android:id="@+id/sp_carType"
-        android:layout_marginTop="15dp"
+        android:theme="@style/AppThemeedittextnew"
         android:layout_marginLeft="20dp"
-        android:padding="5dp"
-        android:minHeight="50dp"
-        android:backgroundTint="@android:color/white"
-        android:layout_below="@+id/input_layout_work"
+        android:layout_marginRight="20dp"
         android:layout_height="wrap_content">
-    </android.support.v7.widget.AppCompatSpinner>
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_car"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:layout_width="match_parent"
+            android:drawableRight="@drawable/ic_home"
+            android:drawablePadding="7dp"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:hint="نوع السيارة"
+            android:singleLine="true"
+
+
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            />
+    </android.support.design.widget.TextInputLayout>
+</RelativeLayout>
+
+
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_layout_color"
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/sp_carType"
+        android:layout_below="@+id/type"
         android:layout_marginLeft="20dp"
+        android:theme="@style/AppThemeedittextnew"
         android:layout_marginRight="20dp"
         android:layout_height="wrap_content">
         <ConstantClasss.Custom_EditText
@@ -130,8 +157,9 @@
             android:drawableRight="@drawable/ic_car"
             android:drawablePadding="7dp"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:textSize="13sp"
-            android:text="لون السيارة"
+            android:hint="لون السيارة"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             />
@@ -142,16 +170,45 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/input_layout_color"
         android:layout_marginLeft="20dp"
+        android:theme="@style/AppThemeedittextnew"
         android:layout_marginRight="20dp"
         android:layout_height="wrap_content">
         <ConstantClasss.Custom_EditText
             android:id="@+id/input_num"
             android:layout_width="match_parent"
+            android:singleLine="true"
             android:drawableRight="@drawable/ic_car"
             android:drawablePadding="7dp"
+            android:inputType="number"
             android:layout_height="wrap_content"
             android:textSize="13sp"
-            android:text="رقم لوحة السيارة"
+            android:hint="رقم لوحة السيارة"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_address"
+        android:layout_width="match_parent"
+
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/input_layout_carNum"
+        android:layout_marginLeft="20dp"
+        android:theme="@style/AppThemeedittextnew"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_address"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:layout_width="match_parent"
+            android:drawableRight="@drawable/location"
+            android:drawablePadding="7dp"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:hint="العنوان"
+            android:singleLine="true"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             />
@@ -159,7 +216,7 @@
     <LinearLayout
 
         android:id="@+id/ripple_register"
-        android:layout_below="@+id/input_layout_carNum"
+        android:layout_below="@+id/input_layout_address"
         android:layout_width="match_parent"
         android:layout_centerInParent="true"
         android:layout_marginLeft="20dp"

@@ -4,16 +4,17 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.andexert.library.RippleView;
 
 public class addSupplierPicDelivery extends AppCompatActivity implements View.OnClickListener{
-RippleView ripple_next;
+LinearLayout ripple_next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_supplier_pic_delivery);
-        ripple_next =(RippleView)findViewById(R.id.ripple_next);
+        ripple_next =(LinearLayout)findViewById(R.id.ripple_next);
         ripple_next.setOnClickListener(this);
     }
 

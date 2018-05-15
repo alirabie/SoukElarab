@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fafafa"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.whinc.widget.ratingbar.RatingBar
+        android:id="@+id/ratingCount"
+        android:layout_width="110dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="end"
+        app:rb_click_rating="false"
+        app:rb_count="5"
+        app:rb_empty="@drawable/empty"
+        app:rb_fill="@drawable/fill"
+        app:rb_max_count="5"
+        app:rb_space="2dp"
+        app:rb_touch_rating="false"
+        />
+    <LinearLayout
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        android:gravity="end"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+
+
+        <ConstantClasss.Custom_Textview
+            android:id="@+id/name"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="end"
+
+            android:text="احمد رضا سعيد"
+
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="11sp"
+            />
+        <ConstantClasss.Custom_Textview
+
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="end"
+            android:text="بواسطة"
+
+            android:layout_marginRight="10dp"
+            android:textColor="#565656"
+            android:textSize="11sp"
+            />
+
+    </LinearLayout>
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/comm"
+        android:textAlignment="textStart"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="end"
+
+        android:text="هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص"
+        android:textColor="#565656"
+        android:textSize="9sp"
+        tools:ignore="RtlCompat" />
+    <LinearLayout
+        android:layout_marginTop="15sp"
+        android:background="@color/gray_btn_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

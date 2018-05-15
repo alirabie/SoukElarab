@@ -2,23 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    android:layout_height="200dp"
+    android:layout_height="wrap_content"
 
-    android:layout_margin="5dp"
+
 
     android:orientation="vertical">
 
     <RelativeLayout
+        android:layout_margin="2dp"
+        android:layout_width="160dp"
+        android:layout_height="220dp"
 
 
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp"
-        android:layout_marginTop="3dp"
         android:background="@drawable/white_shap"
         android:layoutDirection="ltr">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
@@ -41,30 +38,13 @@
                 android:gravity="center">
 
                 <ImageView
-
+                    android:id="@+id/like"
                     android:layout_gravity="center"
                     android:layout_width="18dp"
                     android:layout_height="18sp"
                     android:layout_marginLeft="20dp"
                     android:paddingRight="3dp"
-                    android:src="@drawable/im1" />
-                <!--<com.like.LikeButton-->
-                    <!--android:id="@+id/star_button"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--app:icon_type="Star"-->
-                    <!--app:circle_start_color="@color/colorPrimary"-->
-                    <!--app:like_drawable="@drawable/im1"-->
-                    <!--app:unlike_drawable="@drawable/nott"-->
-                    <!--app:dots_primary_color="@color/colorAccent"-->
-                    <!--app:dots_secondary_color="@color/colorPrimary"-->
-                    <!--app:circle_end_color="@color/colorAccent"-->
-                    <!--app:icon_size="18sp"-->
-                    <!--app:liked="true"-->
-                    <!--android:layout_marginLeft="20dp"-->
-                    <!--app:anim_scale_factor="2"-->
-                    <!--app:is_enabled="false"-->
-                    <!--/>-->
+                     />
             </LinearLayout>
 
             <RelativeLayout
@@ -80,6 +60,7 @@
                     android:src="@drawable/line" />
 
                 <ImageView
+                    android:id="@+id/share"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_centerHorizontal="true"
@@ -100,14 +81,17 @@
                     android:layout_marginTop="5dp"
                     android:src="@drawable/line" />
 
-                <ImageView
+                <CheckBox
+                    android:padding="5dp"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerInParent="true"
                     android:layout_centerVertical="true"
+                    android:id="@+id/basket"
+                    android:background="@drawable/cart"
                     android:layout_gravity="center"
-                    android:src="@drawable/cart" />
+                    android:button="@android:color/transparent" />
             </RelativeLayout>
 
         </LinearLayout>
@@ -125,25 +109,25 @@
 
                 <ImageView
 
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/ques_image"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/image1" />
+                   />
             </RelativeLayout>
 
             <ConstantClasss.Custom_Textview
-                android:id="@+id/txt_signin"
+                android:layout_marginTop="3dp"
+                android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxWidth="200dp"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
-                android:textAlignment="center"
 
-                android:text=" هواوى 7 شريحه 2 جيجا رام شاشه 7 بوصه"
+                android:text="هواوى 7 شريحه 2 جيجا رام شاشه 7 بوصه"
                 android:textColor="#a7a7a7"
-                android:textSize="8sp"
+                android:textSize="9sp"
                 />
 
             <com.whinc.widget.ratingbar.RatingBar
@@ -160,7 +144,7 @@
                 app:rb_touch_rating="false" />
 
             <LinearLayout
-                android:id="@+id/ripple_lgin"
+
                 android:layout_width="115dp"
                 android:layout_height="30dp"
                 android:layout_below="@+id/check_agree"
@@ -170,14 +154,12 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shap"
                 android:gravity="center"
-                android:onClick="onClick"
-                >
+                        >
 
                 <ConstantClasss.Custom_Textview
-
+                    android:id="@+id/price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/ripple_lgin"
                     android:layout_centerHorizontal="true"
 
                     android:text="2500,000 SAR"

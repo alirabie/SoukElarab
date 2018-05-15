@@ -5,4 +5,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+    <string name="required">من فضلك ادخل البيانات المطلوبة</string>
+    <string name="number">يجب الأ يقل رقم الهاتف عن تسع ارقام</string>
+    <string name="load">تم تحميل الصورة بنجاح</string>
+    <string name="areas">نوع السيارة</string>
+
+    <string name="confirr">رساله تأكيد</string>
+    <string name="titlediloge">  هل تريد تسجيل الخروج  </string>
+    <string name="no">  ليس الأن  </string>
 </resources>

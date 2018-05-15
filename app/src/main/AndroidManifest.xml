@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="souk.arab.com.soukelarab">
 
-    <supports-screens
-        android:anyDensity="true"
-        android:largeScreens="true"
-        android:normalScreens="true"
-        android:smallScreens="true"
-        android:xlargeScreens="true" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:label, android:icon, android:theme">
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
@@ -27,6 +36,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBloLuhq7iRuaZaJvDjPiUPuWj63zsMs58" />
+
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
@@ -84,7 +101,18 @@
             android:name=".Requestdetails"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ClinetHomePage" />
-        <activity android:name=".MatgerDetaise"></activity>
+        <activity android:name=".MatgerDetaise" />
+        <activity android:name=".MapOrder" />
+        <activity android:name=".MatgerDetailss" />
+        <activity android:name=".StoreHome" />
+        <activity android:name=".AddProductToStore" />
+        <activity
+            android:name="com.gun0912.tedpicker.ImagePickerActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ProuductDetails" />
+        <activity android:name=".ViewPagerAcctivity" />
+        <activity android:name=".DriverOrderDetailsse" />
+        <activity android:name=".Chat"></activity>
     </application>
 
 </manifest>

@@ -8,50 +8,90 @@
     android:layout_height="match_parent">
 <LinearLayout
     android:id="@+id/container"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_alignParentTop="true"
     android:orientation="vertical"
-    android:layout_height="wrap_content">
+    android:layout_above="@+id/lin_setting"
+    android:layout_height="match_parent">
 
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:weightSum="1"
+        android:weightSum="4"
         android:id="@+id/lin_setting"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:background="@color/movebg"
-        android:layout_height="65dp">
-        <com.andexert.library.RippleView
+        android:layout_height="45dp">
+        <LinearLayout
+            android:id="@+id/ripple_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/notactove">
+            <ImageView
+                android:id="@+id/btn_logout"
+                android:layout_width="24dp"
+                android:layout_weight=".5"
+                android:src="@drawable/logout"
+                android:layout_centerInParent="true"
+                android:background="@color/notactove"
+                android:layout_height="24dp" />
+        </LinearLayout>
+        <LinearLayout
+
             android:id="@+id/ripple_setting"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".5"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@color/notactove"
             android:layout_gravity="center"
-            android:background="@color/movebg">
-            <ImageButton
+            >
+            <ImageView
                 android:id="@+id/btn_setting"
                 android:layout_width="wrap_content"
                 android:layout_centerInParent="true"
-                android:background="@color/movebg"
+
                 android:src="@drawable/ic_setting"
                 android:layout_height="wrap_content" />
-        </com.andexert.library.RippleView>
-        <com.andexert.library.RippleView
+        </LinearLayout>
+        <LinearLayout
+
+            android:id="@+id/driverOrer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@color/notactove"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:id="@+id/orderImage"
+                android:layout_width="24dp"
+                android:layout_centerInParent="true"
+
+                android:src="@drawable/cartt"
+                android:layout_height="24dp" />
+        </LinearLayout>
+        <LinearLayout
             android:id="@+id/ripple_home"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".5"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
             android:layout_gravity="center"
-            android:background="@color/movebg">
-        <ImageButton
+            android:background="@color/notactove">
+        <ImageView
             android:id="@+id/btn_home"
             android:layout_width="wrap_content"
             android:layout_weight=".5"
             android:src="@drawable/ic_deliverhom"
 android:layout_centerInParent="true"
-            android:background="@color/movebg"
+            android:background="@color/notactove"
             android:layout_height="wrap_content" />
-        </com.andexert.library.RippleView>
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@color/movebg"
+    android:background="@drawable/bgg"
+    android:scrollbars="none"
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/movebg"
+
         android:layout_height="match_parent">
         <ConstantClasss.Custom_Textview
             android:id="@+id/txt_signin"
@@ -14,7 +15,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
             android:layout_marginTop="20dp"
-            android:textSize="16sp"
+            android:textSize="13sp"
             android:textStyle="bold"
             android:drawableRight="@drawable/ic_arrow"
             android:drawablePadding="5dp"
@@ -30,116 +31,121 @@
             android:layout_height="wrap_content" />
         <ImageView
             android:id="@+id/img_addpic"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/img_step2"
             android:background="@drawable/ic_store"
-            android:layout_height="wrap_content" />
-        <com.andexert.library.RippleView
+            android:layout_height="100dp" />
+        <LinearLayout
             android:id="@+id/ripple_add"
             android:layout_below="@+id/img_addpic"
             android:layout_width="match_parent"
             android:layout_centerInParent="true"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:padding="5dp"
-            android:background="@drawable/bg_login"
-            android:layout_height="wrap_content"
-            rv_centered="true">
+
+            android:gravity="center"
+            android:background="@drawable/button_shap"
+            android:layout_height="40dp"
+            >
             <ConstantClasss.Custom_Textview
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:padding="5dp"
-                android:textSize="16sp"
+
+                android:textSize="13sp"
                 android:textStyle="bold"
                 android:text=" إضافة صورة المحل او المتجر"
                 android:textColor="@android:color/white"
                 />
-        </com.andexert.library.RippleView>
+        </LinearLayout>
         <ImageView
             android:id="@+id/img_docdpic"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/ripple_add"
             android:background="@drawable/ic_addpics"
-            android:layout_height="wrap_content" />
-        <com.andexert.library.RippleView
+            android:layout_height="100dp" />
+        <LinearLayout
             android:id="@+id/ripple_adddoc"
             android:layout_below="@+id/img_docdpic"
             android:layout_width="match_parent"
             android:layout_centerInParent="true"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:padding="5dp"
-            android:background="@drawable/bg_login"
-            android:layout_height="wrap_content"
-            rv_centered="true">
+            android:gravity="center"
+
+            android:background="@drawable/button_shap"
+            android:layout_height="40dp"
+            >
             <ConstantClasss.Custom_Textview
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:padding="5dp"
-                android:textSize="16sp"
+
+                android:textSize="13sp"
                 android:textStyle="bold"
                 android:text=" شعار المحل"
                 android:textColor="@android:color/white"
                 />
-        </com.andexert.library.RippleView>
+        </LinearLayout>
         <ImageView
             android:id="@+id/img_carpic"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/ripple_adddoc"
             android:background="@drawable/ic_addpics"
-            android:layout_height="wrap_content" />
-        <com.andexert.library.RippleView
+            android:layout_height="100dp" />
+        <LinearLayout
             android:id="@+id/ripple_addcarpic"
             android:layout_below="@+id/img_carpic"
             android:layout_width="match_parent"
             android:layout_centerInParent="true"
             android:layout_marginLeft="20dp"
+            android:gravity="center"
             android:layout_marginRight="20dp"
-            android:padding="5dp"
-            android:background="@drawable/bg_login"
-            android:layout_height="wrap_content"
-            rv_centered="true">
+
+            android:background="@drawable/button_shap"
+            android:layout_height="40dp"
+          >
             <ConstantClasss.Custom_Textview
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:padding="5dp"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
                 android:text=" صورة السجل التجاري"
                 android:textColor="@android:color/white"
                 />
-        </com.andexert.library.RippleView>
+        </LinearLayout>
 
-        <com.andexert.library.RippleView
+        <LinearLayout
+            android:layout_marginBottom="5dp"
             android:id="@+id/ripple_next"
             android:layout_below="@+id/ripple_addcarpic"
-            android:layout_width="150dp"
+            android:layout_width="200dp"
+            android:gravity="center"
             android:layout_centerInParent="true"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="15dp"
-            android:padding="5dp"
-            android:background="@drawable/bg_login"
-            android:layout_height="wrap_content"
-            rv_centered="true">
+
+            android:background="@drawable/button_shap"
+            android:layout_height="40dp"
+            >
             <ConstantClasss.Custom_Textview
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:padding="5dp"
-                android:textSize="16sp"
-                android:drawablePadding="10dp"
+
+                android:textSize="13sp"
+
                 android:textStyle="bold"
-                android:drawableLeft="@drawable/ic_next"
+
                 android:text="التالي"
                 android:textColor="@android:color/white"
                 />
-        </com.andexert.library.RippleView>
+        </LinearLayout>
     </RelativeLayout>
 </ScrollView>

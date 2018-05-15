@@ -2,15 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    android:layout_height="160dp"
+    android:layout_height="200dp"
 
-    android:layout_margin="5dp"
-
+    android:layout_margin="3dp"
     android:orientation="vertical">
 
     <RelativeLayout
-
-
+        android:id="@+id/lin_clicked"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="3dp"
@@ -18,7 +16,6 @@
         android:layout_marginTop="3dp"
         android:background="@drawable/white_shap"
         android:layoutDirection="ltr">
-
         <ImageView
             android:layout_alignParentEnd="true"
             android:layout_margin="5dp"
@@ -116,15 +113,16 @@
                 android:layout_marginTop="5dp">
 
                 <ImageView
-                    android:layout_width="62dp"
-                    android:layout_height="62dp"
+                    android:id="@+id/logoID"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/bbts" />
             </RelativeLayout>
 
             <ConstantClasss.Custom_Textview
-                android:id="@+id/txt_signin"
+                android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxWidth="200dp"
@@ -146,29 +144,29 @@
                 android:textAlignment="center"
 
                 android:text="متجر فانيلا"
-                android:textColor="#c1c1c1"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="8sp"
                 />
 
             <LinearLayout
-                android:id="@+id/ripple_lgin"
+
                 android:layout_width="115dp"
                 android:layout_height="30dp"
-                android:layout_below="@+id/check_agree"
+
 
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shap"
                 android:gravity="center"
-                android:onClick="onClick"
+
                 >
 
                 <ConstantClasss.Custom_Textview
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/ripple_lgin"
+
                     android:layout_centerHorizontal="true"
 
                     android:text="مشاهدة"

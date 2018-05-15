@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#efedf7"
+    android:scrollbars="none"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context="souk.arab.com.soukelarab.MatgerDetailss">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@drawable/bgmatger"
+        android:layout_width="match_parent"
+        android:layoutDirection="ltr"
+        android:layout_height="210dp">
+        <ImageView
+android:layout_marginLeft="10dp"
+            android:src="@drawable/mm2"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
+
+        <ConstantClasss.Custom_Textview
+            android:layout_marginTop="5dp"
+            android:id="@+id/txt_signin"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/white"
+
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:drawableRight="@drawable/ic_arrow"
+            android:drawablePadding="5dp"
+            android:text="متجر باترز"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/chate"
+                   android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:src="@drawable/b3"
+                android:layout_height="70dp" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ques_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+            <ImageView
+                android:id="@+id/call"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/b2"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <ConstantClasss.Custom_Textview
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/rel"
+            android:id="@+id/t1"
+            android:textSize="13dp"
+            android:drawablePadding="5dp"
+            android:text="متجر باترز"
+
+            android:layout_height="wrap_content"/>
+        <ConstantClasss.Custom_Textview
+            android:id="@+id/des"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/t1"
+            android:textSize="11dp"
+            android:drawablePadding="5dp"
+            android:text="متجر الكترونى لصيانه الاجهزه وبيع الموبيلات الحديثه "
+            android:layout_height="wrap_content"/>
+        <ConstantClasss.Custom_Textview
+            android:id="@+id/loc"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/t1"
+            android:drawableRight="@drawable/ic_location"
+            android:textSize="13dp"
+
+            android:drawablePadding="8dp"
+            android:text="جدة"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <LinearLayout
+                android:layoutDirection="ltr"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:paddingRight="10dp"
+                    android:src="@drawable/producct"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <ConstantClasss.Custom_Textview
+                    android:id="@+id/countpro"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:text="100"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <ConstantClasss.Custom_Textview
+
+                android:layout_marginBottom="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:textColor="#c8bdea"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:text="منتج فى المتجر"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/produt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+</android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</ScrollView>

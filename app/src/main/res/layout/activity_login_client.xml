@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bgg"
     android:layoutDirection="ltr"
     android:layout_height="match_parent"
@@ -43,6 +44,7 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:textSize="13sp"
+            android:singleLine="true"
             android:drawableRight="@drawable/ic_person"
             android:drawablePadding="5dp"
             android:textColor="@android:color/white"
@@ -51,6 +53,7 @@
     </android.support.design.widget.TextInputLayout>
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_layout_phone"
+
         android:theme="@style/AppThemeedittextnew"
         android:layout_width="match_parent"
         android:layout_below="@+id/input_layout_email"
@@ -63,8 +66,9 @@
             android:id="@+id/input_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="number"
             android:textSize="13sp"
+            android:singleLine="true"
             android:drawableRight="@drawable/ic_phone"
             android:drawablePadding="5dp"
             android:textColor="@android:color/white"
@@ -94,19 +98,52 @@
             android:password="true"
             android:hint="كلمة المرور" />
     </android.support.design.widget.TextInputLayout>
-    <ConstantClasss.Custom_Textview
+    <!--<ConstantClasss.Custom_Textview-->
+        <!--android:id="@+id/check_agree"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:button="@null"-->
+        <!--android:drawableRight="?android:attr/listChoiceIndicatorMultiple"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:textSize="13sp"-->
+        <!--android:textColor="@color/darkyellow"-->
+        <!--android:text="اوافق علي الشروط والأحكام"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:layout_below="@+id/input_layout_password"-->
+        <!--android:layout_height="wrap_content" />-->
+    <LinearLayout
         android:id="@+id/check_agree"
-        android:layout_width="wrap_content"
-        android:layout_alignParentRight="true"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         android:layout_marginRight="20dp"
-        android:textSize="13sp"
-        android:textColor="@color/darkyellow"
-        android:text="اوافق علي الشروط والأحكام"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="end"
         android:layout_below="@+id/input_layout_password"
+        android:layout_alignParentRight="true"
+        android:layout_width="match_parent"
+        android:layoutDirection="ltr"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_Textview
+
+        android:layout_width="wrap_content"
+        android:textColor="#cf8e40"
+        android:textSize="13sp"
+
+        android:textStyle="bold"
+        android:text="اوافق علي الشروط والأحكام"
         android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:theme="@style/MyCheckBox"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_below="@+id/input_layout_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textSize="13sp"
+            android:layout_alignParentRight="true" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ripple_lgin"

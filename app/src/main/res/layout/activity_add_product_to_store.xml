@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:background="@drawable/bgg"
+    android:layout_height="match_parent"
+    tools:context="souk.arab.com.soukelarab.AddProductToStore">
+    <ConstantClasss.Custom_Textview
+        android:id="@+id/txt_signin"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/white"
+        android:drawableRight="@drawable/ic_arrow"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="25dp"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:text="إنشاء حسب عميل"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/img_carpic"
+        android:layout_width="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ripple_adddoc"
+        android:background="@drawable/ic_addpics"
+        android:layout_height="100dp" />
+    <LinearLayout
+        android:id="@+id/ripple_addcarpic"
+        android:layout_below="@+id/img_carpic"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+
+        android:background="@drawable/button_shap"
+        android:layout_height="wrap_content"
+        >
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:text=" إضافة صورة المنتج"
+            android:textColor="@android:color/white"
+            />
+
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_storename"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/img_step3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_storename"
+            android:layout_width="match_parent"
+            android:drawableRight="@drawable/p1"
+            android:drawablePadding="7dp"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="اسم المنتج"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_storeprice"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/img_step3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_storeprice"
+            android:layout_width="match_parent"
+            android:drawableRight="@drawable/p2"
+            android:drawablePadding="7dp"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="سعر المنتج"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_storedept"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/img_step3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_storedept"
+            android:layout_width="match_parent"
+            android:drawableRight="@drawable/p3"
+            android:drawablePadding="7dp"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:drawableLeft="@drawable/arrwow"
+            android:text="اختر القسم"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_storedetlis"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/img_step3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <ConstantClasss.Custom_EditText
+            android:id="@+id/input_storedetails"
+            android:layout_width="match_parent"
+            android:drawableRight="@drawable/p4"
+            android:drawablePadding="7dp"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="تفاصيل المنتج"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:id="@+id/ripple_addprodct"
+        android:layout_below="@+id/img_carpic"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+
+        android:background="@drawable/button_shap"
+        android:layout_height="wrap_content"
+        >
+        <ConstantClasss.Custom_Textview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:text=" إضافة المنتج"
+            android:textColor="@android:color/white"
+            />
+
+    </LinearLayout>
+</LinearLayout>

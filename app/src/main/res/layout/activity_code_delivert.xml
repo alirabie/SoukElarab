@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/bgg"
     android:layout_height="match_parent"
-    tools:context="souk.arab.com.soukelarab.codeActivity">
+    tools:context="souk.arab.com.soukelarab.codeDelivertActivity">
     <ConstantClasss.Custom_Textview
         android:id="@+id/txt_signin"
         android:layout_width="wrap_content"
@@ -50,9 +50,12 @@
         <ConstantClasss.Custom_EditText
             android:id="@+id/input_code"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
+            android:inputType="number"
             android:textSize="16sp"
+            android:maxLength="4"
+
             android:password="true"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
@@ -91,8 +94,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
-        android:layout_width="160dp"
-        android:layout_marginTop="7dp"
+        android:layout_width="140dp"
+
         android:layout_centerHorizontal="true"
         android:background="@android:color/white"
         android:layout_below="@+id/txt_resend"

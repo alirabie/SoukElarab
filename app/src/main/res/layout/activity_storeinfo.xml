@@ -2,14 +2,14 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/movebg"
+    android:background="@drawable/bgg"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:background="@color/movebg"
+
         android:layout_height="match_parent"
         tools:context="souk.arab.com.soukelarab.DeliveryInfoActivity">
         <ConstantClasss.Custom_Textview
@@ -19,7 +19,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
             android:layout_marginTop="20dp"
-            android:textSize="16sp"
+            android:textSize="13sp"
             android:textStyle="bold"
             android:drawableRight="@drawable/ic_arrow"
             android:drawablePadding="5dp"
@@ -47,7 +47,7 @@
                 android:drawableRight="@drawable/ic_home"
                 android:drawablePadding="7dp"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:text="جهة العمل"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
@@ -60,7 +60,7 @@
             android:id="@+id/linname"
             android:layout_marginRight="20dp"
             android:weightSum="1"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal"
             android:layout_height="wrap_content">
             <android.support.design.widget.TextInputLayout
@@ -78,7 +78,7 @@
                     android:drawablePadding="7dp"
                     android:minWidth="250dp"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="13sp"
                     android:text="رقم الهوية"
                     android:textColor="@android:color/white"
                     android:textColorHint="@android:color/white"
@@ -87,7 +87,7 @@
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_suppliername"
                 android:layout_width="wrap_content"
-                android:layout_marginTop="12dp"
+
                 android:minWidth="250dp"
                 android:layout_gravity="right"
                 android:layout_weight=".5"
@@ -97,8 +97,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minWidth="250dp"
-                    android:textSize="16sp"
-                    android:layout_marginTop="8dp"
+                    android:textSize="13sp"
+
                     android:drawableRight="@drawable/ic_person"
                     android:drawablePadding="7dp"
                     android:text="إسم التاجر"
@@ -123,7 +123,7 @@
                 android:drawablePadding="7dp"
                 android:inputType="number"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:text="رقم هاتف التاجر"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
@@ -143,7 +143,7 @@
                 android:drawableRight="@drawable/ic_home"
                 android:drawablePadding="7dp"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:text="المدينة"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
@@ -163,7 +163,7 @@
                 android:drawableRight="@drawable/location"
                 android:drawablePadding="7dp"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:text="العنوان"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
@@ -183,33 +183,35 @@
                 android:drawableRight="@drawable/location"
                 android:drawablePadding="7dp"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:text="الموقع علي الخريطة"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
                 />
         </android.support.design.widget.TextInputLayout>
-        <com.andexert.library.RippleView
+        <LinearLayout
             android:id="@+id/ripple_register"
             android:layout_below="@+id/input_layout_Map"
             android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
             android:layout_centerInParent="true"
+            android:gravity="center"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="25dp"
-            android:padding="5dp"
-            android:background="@drawable/bg_login"
+
+            android:background="@drawable/button_shap"
             android:layout_height="wrap_content"
-            rv_centered="true">
+            >
             <ConstantClasss.Custom_Textview
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:padding="5dp"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:text="تسجيل"
                 android:textColor="@android:color/white"
                 />
-        </com.andexert.library.RippleView>
+        </LinearLayout>
     </RelativeLayout>
 </ScrollView>

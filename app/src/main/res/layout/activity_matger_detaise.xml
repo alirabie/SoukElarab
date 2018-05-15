@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:scrollbars="none"
     android:layoutDirection="rtl"
 
+
     tools:context="souk.arab.com.soukelarab.MatgerDetaise">
-
-
+    <LinearLayout
+        android:background="#efedf7"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <RelativeLayout
+        android:background="#efedf7"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -26,6 +33,7 @@
                 android:background="@drawable/menu"
                 android:orientation="vertical">
                 <LinearLayout
+                    android:id="@+id/back"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -152,7 +160,7 @@
                     android:textSize="13sp"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
-                    android:text="كل المنتجات"
+                    android:text="أحدث المنتجات"
 
                     android:textColor="#9d9d9d"
                     android:layout_height="wrap_content" />
@@ -225,4 +233,5 @@
             </android.support.v7.widget.RecyclerView>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

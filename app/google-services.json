@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "272890705629",
+    "firebase_url": "https://soukelarab-cd19c.firebaseio.com",
+    "project_id": "soukelarab-cd19c",
+    "storage_bucket": "soukelarab-cd19c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272890705629:android:ca96b2bd266fce03",
+        "android_client_info": {
+          "package_name": "souk.arab.com.soukelarab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272890705629-hn6a5jbquh956c4hapqc47lnabrnqosj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "souk.arab.com.soukelarab",
+            "certificate_hash": "98f00bfa9e6e03a7b9f619abcb6ea3921828f232"
+          }
+        },
+        {
+          "client_id": "272890705629-6bri2p2gb9pgf413f6np5hj4nccrnsep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfo8x4vzTi72B-kOTgPFbef_eAn20kcrs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272890705629-6bri2p2gb9pgf413f6np5hj4nccrnsep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

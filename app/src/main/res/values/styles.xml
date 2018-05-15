@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
@@ -38,18 +38,142 @@
         <!--<item name="windowActionBar">falses</item>-->
         <!--<item name="windowNoTitle">true</item>-->
     </style>
-    <style name="AppThemeedittextnew" parent="Theme.AppCompat.Light.NoActionBar">
-    <!-- Customize your theme here. -->
-    <!-- <item name="colorPrimary">@color/colorPrimary</item>-->
-    <!-- <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
-    <item name="colorAccent">@color/wite</item>
-    <item name="android:textSize">13sp</item>
+    <!--<style name="AppThemeedittextnew" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--&lt;!&ndash; <item name="colorPrimary">@color/colorPrimary</item>&ndash;&gt;-->
+    <!--&lt;!&ndash; <item name="colorPrimaryDark">@color/colorPrimaryDark</item>&ndash;&gt;-->
+    <!--<item name="colorAccent">@color/wite</item>-->
+    <!--<item name="android:textSize">13sp</item>-->
+        <!--<item name="colorControlNormal">@color/wite</item>-->
+    <!--&lt;!&ndash;EditText hint color&ndash;&gt;-->
+    <!--<item name="android:textColorHint">@color/wite</item>-->
+    <!--&lt;!&ndash; TextInputLayout text color&ndash;&gt;-->
+    <!--<item name="colorControlActivated">@color/wite</item>-->
+    <!--&lt;!&ndash; EditText line color when EditText on-focus&ndash;&gt;-->
+    <!--<item name="colorControlHighlight">@color/wite</item>-->
+    <!--</style>-->
+
+    <style name="AppThemeedittextnew" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/coloregraryh</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textDirection" tools:ignore="NewApi">ltr</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/coloregraryh</item>
+        <item name="colorControlNormal">@color/coloregraryh</item>
+        <item name="colorControlActivated">@color/coloregraryh</item>
+
+    </style>
+
+
+
+    <style name="Widget.Design.TextInputLayout" parent="AppTheme">
+        <item name="hintTextAppearance">@style/AppTheme.TextFloatLabelAppearance</item>
+        <item name="errorTextAppearance">@style/AppTheme.TextErrorAppearance</item>
+        <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
+        <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow</item>
+    </style>
+
+    <style name="AppTheme.TextFloatLabelAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:textColorHint">@color/wite</item>
+        <item name="android:textSize">13sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/wite</item>
         <item name="colorControlNormal">@color/wite</item>
-    <!--EditText hint color-->
-    <item name="android:textColorHint">@color/wite</item>
-    <!-- TextInputLayout text color-->
-    <item name="colorControlActivated">@color/wite</item>
-    <!-- EditText line color when EditText on-focus-->
-    <item name="colorControlHighlight">@color/wite</item>
+        <item name="colorControlActivated">@color/wite</item>
+    </style>
+
+    <style name="AppTheme.TextErrorAppearance" parent="TextAppearance.Design.Error">
+        <!-- Error message appearance here -->
+        <item name="android:textColorHint">@color/wite</item>
+        <item name="android:textSize">13sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/wite</item>
+        <item name="colorControlNormal">@color/wite</item>
+        <item name="colorControlActivated">@color/wite</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style name="AppDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppDialogThemew" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Customize your theme here. -->
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowFixedWidthMajor">90%</item>
+        <item name="windowFixedWidthMinor">90%</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="DialogFragment" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="dialog_slide_animation">
+        <item name="android:windowEnterAnimation">@anim/enter_from_left</item>
+        <item name="android:windowExitAnimation">@anim/exit_out_left</item>
+    </style>
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#cf8e40</item>
+        <item name="colorControlActivated">#cf8e40</item>
+    </style>
+
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">#fff</item>
+        <item name="android:textSize">14sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">#fff</item>
+        <item name="colorControlNormal">#fff</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="MySwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#ef3b7c</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/colorAccent</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#ef3b7c</item>
+    </style>
+
+
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
     </style>
 </resources>
