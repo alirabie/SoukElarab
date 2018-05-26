@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/lightgrey"
+    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/lightgrey"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context="souk.arab.com.soukelarab.Requestdetails">
+    <RelativeLayout
+        android:id="@+id/relmap"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp">
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:id="@+id/reldelivery"
+        android:layout_below="@+id/relmap"
+
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_carpic"
+            android:layout_width="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_addpics"
+            android:layout_height="100dp"
+            app:border_width="2dp"
+            app:border_color="#FF000000"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/order_shapp"
+      android:layout_below="@+id/img_carpic"
+        android:layout_marginTop="-30dp"
+        android:layout_height="wrap_content">
+
+        <CheckedTextView
+            android:id="@+id/txtClientName"
+            android:layout_width="wrap_content"
+            android:text="محمد خالد"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="right"
+            android:textColor="@color/movebg"
+            android:layout_height="wrap_content" />
+        <CheckedTextView
+            android:id="@+id/txtClientday"
+            android:layout_width="wrap_content"
+            android:text="12-2-1222"
+            android:textSize="16sp"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/ic_date"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_below="@+id/txtClientName"
+            android:layout_gravity="left"
+            android:textColor="@color/movebg"
+            android:layout_height="wrap_content" />
+        <CheckedTextView
+            android:id="@+id/txtCliendate"
+            android:layout_width="wrap_content"
+            android:text="9:30-1990"
+            android:textSize="16sp"
+            android:layout_marginRight="25dp"
+            android:drawableRight="@drawable/ic_alarm"
+            android:drawablePadding="5dp"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/txtClientName"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/movebg"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnconfirm"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtCliendate"
+            android:textColor="@color/wite"
+            android:textSize="13sp"
+            android:layout_marginTop="10dp"
+            android:text="الموافقه علي الطلب"
+            android:background="@drawable/loginn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnregect"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btnconfirm"
+            android:textColor="@color/wite"
+            android:textSize="13sp"
+            android:text="الغاء الطلب"
+            android:background="@drawable/rejectorder"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/imgdetail"
+        android:layout_width="wrap_content"
+android:layout_below="@+id/reldelivery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/ic_detailsbg"
+        android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content"
+            android:text="تفاصيل الطلب"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="13sp"
+            android:textColor="@color/wite"
+            android:layout_height="wrap_content"  />
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>

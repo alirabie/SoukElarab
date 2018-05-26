@@ -43,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ConstantClasss.CustomRadio
+                android:id="@+id/priceHigh"
                 android:minWidth="150dp"
                 android:layout_weight="0.5"
                 android:textSize="13sp"
@@ -54,6 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <ConstantClasss.CustomRadio
+                android:id="@+id/pricelaw"
                 android:padding="10dp"
                 android:textSize="13sp"
                 android:theme="@style/MyRadioButton"
@@ -79,6 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         <ConstantClasss.CustomRadio
+            android:id="@+id/rateHigh"
             android:minWidth="150dp"
             android:padding="5dp"
             android:layout_weight="0.5"
@@ -91,6 +94,7 @@
             android:layout_height="wrap_content" />
         <ConstantClasss.CustomRadio
             android:padding="5dp"
+            android:id="@+id/ratelaw"
             android:theme="@style/MyRadioButton"
             android:textColor="@color/colorAccent"
             android:layout_weight="0.5"
@@ -101,28 +105,28 @@
         </RadioGroup>
     </LinearLayout>
     <RelativeLayout
+        android:id="@+id/searchEngin"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
-        android:gravity="left"
+
+        android:background="@drawable/button_shap"
         android:layout_gravity="left"
         android:layout_width="match_parent"
         android:layout_height="40dp">
-        <android.support.v7.widget.AppCompatSpinner
-            android:background="@drawable/shap_spineerrrer"
-            android:layout_width="match_parent"
-            android:layout_gravity="left"
-            android:textSize="13sp"
-            android:gravity="left"
-            android:layout_height="match_parent">
-        </android.support.v7.widget.AppCompatSpinner>
-        <ImageView
+        <ConstantClasss.Custom_Textview
+            android:id="@+id/txt_file_path"
+            android:text="بحث"
+            android:textSize="15sp"
+            android:layout_centerInParent="true"
             android:layout_centerVertical="true"
-            android:padding="10dp"
-            android:src="@android:drawable/arrow_down_float"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/wite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
 
     </RelativeLayout>
 </LinearLayout>

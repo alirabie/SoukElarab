@@ -105,6 +105,8 @@ public class LoginClientActivity extends AppCompatActivity {
                 .themeColor(getResources().getColor(R.color.colorAccent))
                 .fadeColor(getResources().getColor(R.color.colorAccent)).build();
         dialog.show();
+
+
         AndroidNetworking.post(URLS.register)
                 .addBodyParameter("role","client")
                 .addBodyParameter("username",input_email.getText().toString())
@@ -144,14 +146,16 @@ public class LoginClientActivity extends AppCompatActivity {
                     @Override
                     public void onError(ANError error) {
                         dialog.dismiss();
-                        // handle error
+                        Toast.makeText(getApplicationContext(),error.getErrorDetail(),Toast.LENGTH_LONG).show();
                     }
                 });
     }
 
     //
-    private boolean validation() {
 
+
+
+    private boolean validation() {
 
         boolean check = true;
         if (input_email.getText().toString().equals("")&&input_password.getText().toString().equals("")&&input_phone.getText().toString().equals("")){

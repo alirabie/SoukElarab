@@ -27,22 +27,20 @@
      android:layout_width="match_parent"
      android:layout_height="wrap_content">
      <ConstantClasss.Custom_Textview
-         android:layout_weight="0.90"
-
-         android:maxWidth="200dp"
+android:id="@+id/txttitle"
+android:minWidth="100dp"
          android:textColor="@color/grey"
          android:textSize="9sp"
-         android:text="تم ارسال طلب شراء من قبل احمد رضا"
+         android:text="تم ارسال طلب شراء من قبل "
          android:layout_marginRight="10dp"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content" />
      <ConstantClasss.Custom_Textview
          android:textSize="9sp"
-         android:layout_gravity="end"
-         android:maxWidth="200dp"
+         android:id="@+id/txtName"
          android:gravity="end"
          android:textColor="#f03b7c"
-         android:text="محمد خالد"
+         android:text=""
          android:layout_marginRight="9dp"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content" />
@@ -54,11 +52,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ConstantClasss.Custom_Textview
-                android:layout_weight="0.95"
-
                 android:maxWidth="200dp"
                 android:textColor="#f03b7c"
-                android:text="جدة"
+                android:text="bb"
+                android:id="@+id/txtlocatin"
                 android:textSize="9sp"
                 android:drawablePadding="5dp"
                 android:drawableRight="@drawable/ic_clentlocation"
@@ -67,12 +64,13 @@
                 android:layout_height="wrap_content" />
             <ConstantClasss.Custom_Textview
                 android:textSize="9sp"
+                android:id="@+id/txttime"
                 android:layout_gravity="end"
                 android:maxWidth="200dp"
                 android:gravity="end"
                 android:textColor="#f03b7c"
-                android:text="09.00 PM"
-
+                android:text=""
+android:visibility="gone"
                 android:layout_marginRight="9dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

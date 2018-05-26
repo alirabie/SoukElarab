@@ -11,13 +11,35 @@
 <RelativeLayout
 android:id="@+id/relmap"
     android:layout_width="wrap_content"
-    android:layout_height="200dp">
+    android:layout_height="220dp">
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true" />
+    <RelativeLayout
+        android:id="@+id/imgdetail"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_detailsbg"
+        android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content"
+            android:text="تفاصيل الطلب"
+            android:layout_marginTop="70dp"
+android:layout_centerHorizontal="true"
+            android:textSize="13sp"
+            android:textColor="@color/wite"
+          android:layout_height="wrap_content"  />
+    </RelativeLayout>
+
 
 </RelativeLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycle_requestsdetails"
         android:layout_below="@+id/relmap"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_margin="10dp"
         android:layout_height="wrap_content">
 
@@ -33,6 +55,7 @@ android:layout_marginBottom="10dp" android:layout_centerHorizontal="true"
         <ConstantClasss.Custom_Textview
             android:layout_width="wrap_content"
             android:text="499"
+            android:id="@+id/txttotal"
             android:textSize="16sp"
             android:layout_weight=".5"
             android:textColor="@color/movebg"

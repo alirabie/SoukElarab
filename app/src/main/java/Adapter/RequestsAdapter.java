@@ -9,13 +9,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import Model.Order;
+import Model.Orderdetails;
 import Model.RequestsModel;
+import URLS.URLS;
 import souk.arab.com.soukelarab.R;
 import souk.arab.com.soukelarab.Requestdetails;
 
@@ -30,10 +37,10 @@ public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.ViewHo
     public static   int num;
     Context context;
 RelativeLayout relall;
-    List<RequestsModel> faqModels;
+    List<Order> faqModels;
     boolean ischecked=false;
 
-    public RequestsAdapter(Context context, ArrayList<RequestsModel> faqModels) {
+    public RequestsAdapter(Context context, List<Order> faqModels) {
         this.context = context;
         this.faqModels = faqModels;
     }
@@ -52,16 +59,52 @@ RelativeLayout relall;
             public void onClick(View v) {
                 if (onItemClickListener != null) {
                     onItemClickListener.onclick(position);
-                    Toast.makeText(context, "tesst", Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(context, "tesst", Toast.LENGTH_SHORT).show();
                //    startActivity(context,Requestdetails.class);
 
-                    Intent intent=new Intent(context,Requestdetails.class);
+                    Intent intent=new Intent(context, Orderdetails.class);
+                    intent.putExtra("id",faqModels.get(position).getOrderId());
+                    intent.putExtra("date",faqModels.get(position).getDate());
+                    intent.putExtra("time",faqModels.get(position).getAddress());
+                    intent.putExtra("img",faqModels.get(position).getUserImg());
+                    intent.putExtra("name",faqModels.get(position).getUsername());
+
                     context.startActivity(intent);
 
                 }
             }
         });
-//        RequestsModel faqModel = faqModels.get(position);
+        Order faqModel = faqModels.get(position);
+        if (faqModel.getUsername().equals("")){
+            holder.txtClientName.setText("");
+
+        }else {
+            holder.txtClientName.setText(faqModel.getUsername());
+
+        }
+        if (faqModel.getAddress().equals("")){
+            holder.txtClientlocation.setText("");
+
+        }else {
+            holder.txtClientlocation.setText(faqModel.getAddress());
+
+        }
+        if (faqModel.getDate().equals("")){
+            holder.txtorderdate.setText("");
+        }else {
+            holder.txtorderdate.setText(faqModel.getDate());
+        }
+       // holder.txtorderTime.setText(faqModel.);
+        if (faqModel.getUserImg().equals("")||faqModel.getUserImg().equals(null)){
+            Picasso.with(context)
+                    .load(URLS.imageBase+faqModel.getUserImg())
+                    .placeholder(R.drawable.image1)
+                    .error(R.drawable.image1)
+                    .into(holder.ques_image);
+        }
+        else {
+            Picasso.with(context).load(URLS.imageBase+faqModel.getUserImg()).into(holder.ques_image);
+        }
     }
     @Override
     public int getItemCount() {
@@ -72,14 +115,19 @@ RelativeLayout relall;
         this.onItemClickListener = onClickListener;
     }
     public class ViewHolder extends RecyclerView.ViewHolder {
-       /* private final TextView lawer_faq_qu,answer;
-        private final LinearLayout lin_ques,aswerLin;*/
+        private final TextView txtClientName,txtorderTime,txtClientlocation,txtorderdate;
+        private final LinearLayout lin_ques;
         ImageView ques_image;
 
         public ViewHolder(View itemView) {
             super(itemView);
-             relall=(RelativeLayout)itemView.findViewById(R.id.relall);
-
+            txtClientName=(TextView) itemView.findViewById(R.id.txtClientName);
+            txtorderTime = (TextView)itemView.findViewById(R.id.txtorderTime);
+            txtClientlocation = (TextView)itemView.findViewById(R.id.txtClientlocation);
+            txtorderdate = (TextView)itemView.findViewById(R.id.txtorderdate);
+            ques_image = (ImageView)itemView.findViewById(R.id.img_request);
+            lin_ques = (LinearLayout)itemView.findViewById(R.id.relall);
+            relall = (RelativeLayout)itemView.findViewById(R.id.relall);
         }
     }
 }

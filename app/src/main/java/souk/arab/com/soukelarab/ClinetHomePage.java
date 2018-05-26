@@ -22,6 +22,8 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -29,9 +31,12 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -51,10 +56,13 @@ import Adapter.AllproductAdapter;
 import Adapter.DepartmentAdapter;
 import Adapter.FavouritAdapter;
 import Adapter.MoreBuyerAdapter;
+import ConstantClasss.CustomRadio;
 import Fragments.AllProductRecyclesFragment;
 import Fragments.CardFragment;
+import Fragments.CustomSearchFragemt;
 import Fragments.Favourit;
 import Fragments.NavigationDrawer;
+import Fragments.SearchFragemt;
 import Fragments.Settings;
 import Fragments.TraderFragment;
 import Model.Department;
@@ -67,6 +75,7 @@ public class ClinetHomePage extends AppCompatActivity implements View.OnClickLis
 
     LinearLayout h1, h2, h3, h4, h5,filter;
     TextView txt_signin;
+    EditText editSearch;
     private ImageView menuu;
     private DrawerLayout drawer;
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
@@ -77,6 +86,8 @@ public class ClinetHomePage extends AppCompatActivity implements View.OnClickLis
     private SharedPreferences.Editor editid;
     private SharedPreferences preferencesid;
 
+    String price="DESC";
+    String rate="DESC";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -180,6 +191,7 @@ public class ClinetHomePage extends AppCompatActivity implements View.OnClickLis
         h4 = (LinearLayout) findViewById(R.id.h4);
         h5 = (LinearLayout) findViewById(R.id.h5);
         txt_signin = (TextView) findViewById(R.id.txt_signin);
+        editSearch = (EditText) findViewById(R.id.editSearch);
         menuu = (ImageView) findViewById(R.id.menu);
         drawer = (DrawerLayout) findViewById(R.id.drawer_lay);
     }
@@ -196,6 +208,35 @@ public class ClinetHomePage extends AppCompatActivity implements View.OnClickLis
         NavigationDrawer drawerFragment = (NavigationDrawer)
                 getSupportFragmentManager().findFragmentById(R.id.nv_fragment);
         drawerFragment.setUp((DrawerLayout) findViewById(R.id.drawer_lay));
+
+
+        editSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (!editSearch.getText().toString().equals("")){
+                    Bundle bundle = new Bundle();
+                    bundle.putString("message", editSearch.getText().toString() );
+                    SearchFragemt  fragInfo = new SearchFragemt();
+                    fragInfo.setArguments(bundle);
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, fragInfo).commit();
+
+                }
+                else {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, new AllProductRecyclesFragment()).commit();
+                }
+            }
+        });
     }
 
     @Override
@@ -344,12 +385,11 @@ public class ClinetHomePage extends AppCompatActivity implements View.OnClickLis
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCancelable(false);
         dialog.setCanceledOnTouchOutside(false);
-        dialog.setContentView(R.layout.custom_dialogbox_otp);
+        dialog.setContentView(R.layout.ticket_pup);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        TextView text = (TextView) dialog.findViewById(R.id.txt_file_path);
-        TextView mass = (TextView) dialog.findViewById(R.id.masage);
 
-        Button dialogBtn_cancel = (Button) dialog.findViewById(R.id.btn_cancel);
+
+        LinearLayout dialogBtn_cancel = (LinearLayout) dialog.findViewById(R.id.btn_cancel);
         dialogBtn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -358,8 +398,7 @@ public class ClinetHomePage extends AppCompatActivity implements View.OnClickLis
             }
         });
 
-        Button dialogBtn_okay = (Button) dialog.findViewById(R.id.btn_okay);
-
+        LinearLayout dialogBtn_okay = (LinearLayout) dialog.findViewById(R.id.okLin);
 
 
         dialogBtn_okay.setOnClickListener(new View.OnClickListener() {
@@ -386,7 +425,7 @@ public class ClinetHomePage extends AppCompatActivity implements View.OnClickLis
     //filter
     public void setDiloge() {
 
-        DialogPlus dialog = DialogPlus.newDialog(this)
+        final DialogPlus dialog = DialogPlus.newDialog(this)
                 .setContentHolder(new ViewHolder(R.layout.filter_layput))
                 .setExpanded(true)
                 // This will enable the expand feature, (similar to android L share dialog)
@@ -397,6 +436,53 @@ public class ClinetHomePage extends AppCompatActivity implements View.OnClickLis
                 .setMargin(10, 0, 10, 10)
                 .create();
 
+        RelativeLayout searchEngin = (RelativeLayout) dialog.findViewById(R.id.searchEngin);
+        CustomRadio pricelaw = (CustomRadio) dialog.findViewById(R.id.pricelaw);
+        CustomRadio priceHigh = (CustomRadio) dialog.findViewById(R.id.priceHigh);
+        CustomRadio rateHigh = (CustomRadio) dialog.findViewById(R.id.rateHigh);
+        CustomRadio ratelaw = (CustomRadio) dialog.findViewById(R.id.ratelaw);
+
+        pricelaw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                price="ASC";
+            //    Toast.makeText(ClinetHomePage.this, price, Toast.LENGTH_SHORT).show();
+            }
+        });
+        priceHigh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                price="DESC";
+
+          //      Toast.makeText(ClinetHomePage.this, price, Toast.LENGTH_SHORT).show();
+            }
+        });
+        ratelaw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rate="ASC";
+            //    Toast.makeText(ClinetHomePage.this, price, Toast.LENGTH_SHORT).show();
+            }
+        });
+        rateHigh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rate="DESC";
+          //      Toast.makeText(ClinetHomePage.this, price, Toast.LENGTH_SHORT).show();
+            }
+        });
+        searchEngin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putString("price",price);
+                bundle.putString("rate",rate);
+                CustomSearchFragemt fragInfo = new CustomSearchFragemt();
+                fragInfo.setArguments(bundle);
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, fragInfo).commit();
+                dialog.dismiss();
+            }
+        });
 
         dialog.show();
     }

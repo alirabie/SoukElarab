@@ -9,6 +9,7 @@ import android.os.Bundle;
 public class SplashActivity extends AppCompatActivity {
 
     private String role;
+    private String code;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,16 +31,17 @@ public class SplashActivity extends AppCompatActivity {
                     }
                     SharedPreferences preferencesid = SplashActivity.this.getSharedPreferences("pref", Context.MODE_PRIVATE);
                     role = preferencesid.getString("role", "nnn");
-                    if (role.equals("client")){
+                    code = preferencesid.getString("code", "nnn");
+                    if (role.equals("client")&&code.equals("1")){
                         Intent intentt=new Intent(SplashActivity.this, ClinetHomePage.class);
                         intentt.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                         startActivity(intentt);
-                    }   if (role.equals("driver")){
+                    }   if (role.equals("driver")&&code.equals("1")){
                         Intent intent=new Intent(SplashActivity.this, DeliverMain.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                         startActivity(intent);
                     }
-                    else if (role.equals("nnn")){
+                    else if (role.equals("nnn")||code.equals("nnn")){
                         Intent intent=new Intent(SplashActivity.this, LoginActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                         startActivity(intent);

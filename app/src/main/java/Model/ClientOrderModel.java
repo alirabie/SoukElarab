@@ -11,6 +11,15 @@ public class ClientOrderModel {
     String des;
     String number;
     String rating;
+    String order_status;
+
+    public String getOrder_status() {
+        return order_status;
+    }
+
+    public void setOrder_status(String order_status) {
+        this.order_status = order_status;
+    }
 
     public String getName() {
         return name;

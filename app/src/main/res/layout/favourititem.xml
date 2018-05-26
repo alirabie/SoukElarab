@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
         <ImageView
-            android:id="@+id/txtdate"
+            android:id="@+id/imgfav"
             android:layout_width="wrap_content"
            android:background="@drawable/ic_fav"
             android:layout_alignParentLeft="true"
@@ -146,6 +146,7 @@
             android:layout_marginTop="10dp"
             android:layout_height="50dp" />
         <Button
+            android:id="@+id/btncall"
             android:layout_width="wrap_content"
             android:layout_below="@+id/relall"
             android:layout_marginTop="20dp"

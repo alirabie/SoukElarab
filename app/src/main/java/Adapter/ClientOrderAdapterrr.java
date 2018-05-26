@@ -67,13 +67,21 @@ public class ClientOrderAdapterrr extends RecyclerView.Adapter<ClientOrderAdapte
        holder.name.setText(faqModel.getName());
        holder.proNum.setText(faqModel.getNumber());
        holder.price.setText(faqModel.getPrice() + " SAR ");
-
+       holder.price.setText(faqModel.getPrice() + " SAR ");
+        String order_check = faqModel.getOrder_status();
         Picasso.with(context)
                 .load(URLS.imageBase+faqModel.getImage())
                 .placeholder(R.drawable.placehodleer)
                 .error(R.drawable.placehodleer)
                 .into(holder.ques_image);
-
+        if (order_check.equals("1")){
+            holder.status.setText(" الطلب قيد التنفيذ");
+        }else if (order_check.equals("2")){
+            holder.status.setText("جاري التوصيل");
+        }
+        else if (order_check.equals("3")){
+            holder.status.setText("تم تسليم الطلب");
+        }
 
     }
     @Override
@@ -86,7 +94,7 @@ public class ClientOrderAdapterrr extends RecyclerView.Adapter<ClientOrderAdapte
     public class ViewHolder extends RecyclerView.ViewHolder {
        /* private final TextView lawer_faq_qu,answer;
         private final LinearLayout lin_ques,aswerLin;*/
-       private final TextView name,price,des,proNum;
+       private final TextView name,price,des,proNum,status;
         com.whinc.widget.ratingbar.RatingBar ratingBar;
         ImageView ques_image;
         public ViewHolder(View itemView) {
@@ -97,6 +105,7 @@ public class ClientOrderAdapterrr extends RecyclerView.Adapter<ClientOrderAdapte
             proNum=itemView.findViewById(R.id.proNum);
             price=itemView.findViewById(R.id.price);
             ratingBar=itemView.findViewById(R.id.ratingBar);
+            status=itemView.findViewById(R.id.status);
 
 
         }

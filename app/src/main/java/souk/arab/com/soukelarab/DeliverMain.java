@@ -64,6 +64,8 @@ public class DeliverMain extends AppCompatActivity implements
 
 
         setContentView(R.layout.activity_deliver_main);
+
+
         preferencesid = this.getSharedPreferences("pref", Context.MODE_PRIVATE);
         editid = preferencesid.edit();
         btn_home = (ImageView) findViewById(R.id.btn_home);
@@ -129,7 +131,7 @@ public class DeliverMain extends AppCompatActivity implements
         ripple_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                showDialogExis(DeliverMain.this);
             }
         });
     }
@@ -270,17 +272,60 @@ public class DeliverMain extends AppCompatActivity implements
         Log.v("lat", String.valueOf(currentLatitude));
         //    Toast.makeText(this, currentLatitude + " WORKS " + currentLongitude + "", Toast.LENGTH_LONG).show();
     }
+    @Override
+    public void onBackPressed() {
+
+        showDialogExis(DeliverMain.this);
+    }
+
+
+//    public void showDialogExis(Activity activity) {
+//        final Dialog dialog = new Dialog(activity);
+//        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        dialog.setCancelable(false);
+//        dialog.setCanceledOnTouchOutside(false);
+//        dialog.setContentView(R.layout.custom_dialogbox_otp);
+//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+//        TextView text = (TextView) dialog.findViewById(R.id.txt_file_path);
+//        TextView mass = (TextView) dialog.findViewById(R.id.masage);
+//
+//        Button dialogBtn_cancel = (Button) dialog.findViewById(R.id.btn_cancel);
+//        dialogBtn_cancel.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                    Toast.makeText(getApplicationContext(),"Cancel" ,Toast.LENGTH_SHORT).show();
+//                dialog.dismiss();
+//            }
+//        });
+//
+//        Button dialogBtn_okay = (Button) dialog.findViewById(R.id.btn_okay);
+//
+//
+//
+//        dialogBtn_okay.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                SharedPreferences.Editor edit = preferencesid.edit();
+//                edit.remove("role");
+//                edit.apply();
+//                Intent i=new Intent(DeliverMain.this, RegisterActivity.class);
+//                startActivity(i);
+//            }
+//        });
+//        dialog.show();
+//    }
+
+
     public void showDialogExis(Activity activity) {
         final Dialog dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCancelable(false);
         dialog.setCanceledOnTouchOutside(false);
-        dialog.setContentView(R.layout.custom_dialogbox_otp);
+        dialog.setContentView(R.layout.ticket_pup);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        TextView text = (TextView) dialog.findViewById(R.id.txt_file_path);
-        TextView mass = (TextView) dialog.findViewById(R.id.masage);
 
-        Button dialogBtn_cancel = (Button) dialog.findViewById(R.id.btn_cancel);
+
+        LinearLayout dialogBtn_cancel = (LinearLayout) dialog.findViewById(R.id.btn_cancel);
         dialogBtn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -289,18 +334,18 @@ public class DeliverMain extends AppCompatActivity implements
             }
         });
 
-        Button dialogBtn_okay = (Button) dialog.findViewById(R.id.btn_okay);
-
+        LinearLayout dialogBtn_okay = (LinearLayout) dialog.findViewById(R.id.okLin);
 
 
         dialogBtn_okay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences.Editor edit = preferencesid.edit();
-                edit.remove("role");
-                edit.apply();
-                Intent i=new Intent(DeliverMain.this, RegisterActivity.class);
-                startActivity(i);
+//                    Toast.makeText(getApplicationContext(),"Okay" ,Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                dialog.cancel();
             }
         });
         dialog.show();

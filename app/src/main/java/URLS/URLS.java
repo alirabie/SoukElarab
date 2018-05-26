@@ -26,4 +26,8 @@ public class URLS {
     public static final String getProfile="http://market.wildso.com/public/api/profile";
     public static final String driverOrder="http://market.wildso.com/public/api/driver/myorders";
     public static final String updateProfi="http://market.wildso.com/public/api/profile_update";
+    public static final String search="http://market.wildso.com/public/api/client/product_search";
+    public static final String addproductstore="http://market.wildso.com/public/api/matjar/add_product";
+    public static final String chateAll="http://market.wildso.com/public/api/client/all_chats";
+
 }

@@ -29,13 +29,23 @@
             android:layout_below="@+id/txt_signin"
             android:background="@drawable/ic_step2"
             android:layout_height="wrap_content" />
-        <ImageView
+      <!--  <ImageView
             android:id="@+id/img_addpic"
             android:layout_width="100dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/img_step2"
             android:background="@drawable/ic_store"
-            android:layout_height="100dp" />
+            android:layout_height="100dp" />-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_addpic"
+            android:layout_width="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/img_step2"
+            android:background="@drawable/ic_store"
+            android:layout_height="100dp"
+            app:border_width="1dp"
+            app:border_color="#FF000000"/>
         <LinearLayout
             android:id="@+id/ripple_add"
             android:layout_below="@+id/img_addpic"
@@ -59,13 +69,24 @@
                 android:textColor="@android:color/white"
                 />
         </LinearLayout>
-        <ImageView
+       <!-- <ImageView
             android:id="@+id/img_docdpic"
             android:layout_width="100dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/ripple_add"
             android:background="@drawable/ic_addpics"
-            android:layout_height="100dp" />
+            android:layout_height="100dp" />-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_docdpic"
+            android:layout_width="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ripple_add"
+            app:border_width="1dp"
+            app:border_color="#FF000000"
+            android:background="@drawable/ic_addpics"
+            android:layout_height="100dp"
+           />
         <LinearLayout
             android:id="@+id/ripple_adddoc"
             android:layout_below="@+id/img_docdpic"
@@ -89,13 +110,17 @@
                 android:textColor="@android:color/white"
                 />
         </LinearLayout>
-        <ImageView
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/img_carpic"
             android:layout_width="100dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/ripple_adddoc"
             android:background="@drawable/ic_addpics"
-            android:layout_height="100dp" />
+            android:layout_height="100dp"
+            app:border_width="1dp"
+            app:border_color="#FF000000"/>
         <LinearLayout
             android:id="@+id/ripple_addcarpic"
             android:layout_below="@+id/img_carpic"
@@ -121,31 +146,30 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginBottom="5dp"
-            android:id="@+id/ripple_next"
-            android:layout_below="@+id/ripple_addcarpic"
+            android:id="@+id/ripple_nextsupplier"
             android:layout_width="200dp"
-            android:gravity="center"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ripple_addcarpic"
             android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="15dp"
 
             android:background="@drawable/button_shap"
-            android:layout_height="40dp"
-            >
+            android:gravity="center">
+
             <ConstantClasss.Custom_Textview
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
 
-                android:textSize="13sp"
-
-                android:textStyle="bold"
-
                 android:text="التالي"
+
                 android:textColor="@android:color/white"
-                />
+
+                android:textSize="13sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

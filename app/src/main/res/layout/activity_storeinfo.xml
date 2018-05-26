@@ -12,19 +12,20 @@
 
         android:layout_height="match_parent"
         tools:context="souk.arab.com.soukelarab.DeliveryInfoActivity">
+
         <ConstantClasss.Custom_Textview
             android:id="@+id/txt_signin"
             android:layout_width="wrap_content"
-            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
             android:layout_marginTop="20dp"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            android:drawableRight="@drawable/ic_arrow"
             android:drawablePadding="5dp"
+            android:drawableRight="@drawable/ic_arrow"
             android:text="إنشاء حساب مقدم خدمة"
-            android:layout_height="wrap_content" />
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
         <ImageView
             android:id="@+id/img_step3"
             android:layout_width="wrap_content"
@@ -41,17 +42,18 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_height="wrap_content">
+
             <ConstantClasss.Custom_EditText
-                android:id="@+id/input_storename"
+                android:id="@+id/input_storenametrader"
                 android:layout_width="match_parent"
-                android:drawableRight="@drawable/ic_home"
-                android:drawablePadding="7dp"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:text="جهة العمل"
+                android:drawablePadding="7dp"
+                android:drawableRight="@drawable/ic_home"
+                android:hint="أسم المحل  / المتجر"
+                android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                />
+                android:textSize="13sp" />
         </android.support.design.widget.TextInputLayout>
         <LinearLayout
             android:layout_below="@+id/input_layout_storename"
@@ -71,18 +73,19 @@
                 android:layout_weight=".5"
                 android:minWidth="250dp"
                 android:layout_height="wrap_content">
+
                 <ConstantClasss.Custom_EditText
                     android:id="@+id/input_id"
                     android:layout_width="wrap_content"
-                    android:drawableRight="@drawable/ic_person"
-                    android:drawablePadding="7dp"
-                    android:minWidth="250dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:text="رقم الهوية"
+                    android:drawablePadding="7dp"
+                    android:drawableRight="@drawable/ic_person"
+                    android:hint="رقم الهويه"
+                    android:maxLines="1"
+                    android:minWidth="250dp"
                     android:textColor="@android:color/white"
                     android:textColorHint="@android:color/white"
-                    />
+                    android:textSize="13sp" />
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_suppliername"
@@ -92,19 +95,20 @@
                 android:layout_gravity="right"
                 android:layout_weight=".5"
                 android:layout_height="wrap_content">
+
                 <ConstantClasss.Custom_EditText
                     android:id="@+id/input_suppliername"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minWidth="250dp"
-                    android:textSize="13sp"
-
-                    android:drawableRight="@drawable/ic_person"
                     android:drawablePadding="7dp"
-                    android:text="إسم التاجر"
+                    android:drawableRight="@drawable/ic_person"
+                    android:hint="أسم التاجر"
+
+                    android:maxLines="1"
+                    android:minWidth="250dp"
                     android:textColor="@android:color/white"
                     android:textColorHint="@android:color/white"
-                    />
+                    android:textSize="13sp" />
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
@@ -116,18 +120,19 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_height="wrap_content">
+
             <ConstantClasss.Custom_EditText
                 android:id="@+id/input_phon"
                 android:layout_width="match_parent"
-                android:drawableRight="@drawable/ic_phone"
-                android:drawablePadding="7dp"
-                android:inputType="number"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:text="رقم هاتف التاجر"
+                android:drawablePadding="7dp"
+                android:drawableRight="@drawable/ic_phone"
+                android:hint="رقم جوال المتجر"
+                android:inputType="number"
+                android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                />
+                android:textSize="13sp" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_layout_city"
@@ -135,6 +140,7 @@
             android:layout_marginTop="10dp"
             android:layout_below="@+id/input_layout_phon"
             android:layout_marginLeft="20dp"
+            android:visibility="gone"
             android:layout_marginRight="20dp"
             android:layout_height="wrap_content">
             <ConstantClasss.Custom_EditText
@@ -144,7 +150,8 @@
                 android:drawablePadding="7dp"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
-                android:text="المدينة"
+                android:text="Ø§Ù„Ù…Ø¯ÙŠÙ†Ø©"
+                android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
                 />
@@ -157,17 +164,18 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_height="wrap_content">
+
             <ConstantClasss.Custom_EditText
                 android:id="@+id/input_address"
                 android:layout_width="match_parent"
-                android:drawableRight="@drawable/location"
-                android:drawablePadding="7dp"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:text="العنوان"
+                android:drawablePadding="7dp"
+                android:drawableRight="@drawable/location"
+                android:hint="عنوان المتجر"
+                android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                />
+                android:textSize="13sp" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_layout_Map"
@@ -177,17 +185,18 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_height="wrap_content">
+
             <ConstantClasss.Custom_EditText
-                android:id="@+id/input_map"
+                android:id="@+id/input_maptrader"
                 android:layout_width="match_parent"
-                android:drawableRight="@drawable/location"
-                android:drawablePadding="7dp"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:text="الموقع علي الخريطة"
+                android:drawablePadding="7dp"
+                android:drawableRight="@drawable/location"
+                android:hint="العنوان من الخريطة"
+                android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                />
+                android:textSize="13sp" />
         </android.support.design.widget.TextInputLayout>
         <LinearLayout
             android:id="@+id/ripple_register"
@@ -203,15 +212,16 @@
             android:background="@drawable/button_shap"
             android:layout_height="wrap_content"
             >
+
             <ConstantClasss.Custom_Textview
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:maxLines="1"
                 android:padding="5dp"
-                android:textSize="13sp"
                 android:text="تسجيل"
                 android:textColor="@android:color/white"
-                />
+                android:textSize="13sp" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

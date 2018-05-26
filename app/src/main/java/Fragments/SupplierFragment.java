@@ -10,11 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import Adapter.FavouritAdapter;
+import Model.Driver;
 import Model.RequestsModel;
 import souk.arab.com.soukelarab.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,7 +23,7 @@ import souk.arab.com.soukelarab.R;
 public class SupplierFragment extends Fragment {
     View view;
 RecyclerView recycle_supplier;
-    ArrayList<RequestsModel> faqModels;
+    ArrayList<Driver> faqModels;
 
     public SupplierFragment() {
         // Required empty public constructor

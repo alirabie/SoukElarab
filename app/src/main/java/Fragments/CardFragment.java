@@ -40,6 +40,8 @@ import Adapter.CardAdapter;
 import Adapter.ClientFavAdapter;
 import Model.RequestsModel;
 import URLS.URLS;
+import cc.cloudist.acplibrary.ACProgressConstant;
+import cc.cloudist.acplibrary.ACProgressFlower;
 import souk.arab.com.soukelarab.MapOrder;
 import souk.arab.com.soukelarab.R;
 
@@ -59,6 +61,8 @@ LinearLayout ripple_confirm,totle;
     private CardAdapter adapter;
     private String total;
     int textviewIntPrice;
+    private ACProgressFlower dialog;
+
     public CardFragment() {
         // Required empty public constructor
     }
@@ -98,6 +102,11 @@ public void setUpClick()
     }
     // كارت
     public void allPro(){
+        dialog = new ACProgressFlower.Builder(getActivity())
+                .direction(ACProgressConstant.DIRECT_CLOCKWISE)
+                .themeColor(getResources().getColor(R.color.colorAccent))
+                .fadeColor(getResources().getColor(R.color.colorAccent)).build();
+        dialog.show();
         faqModels.clear();
         AndroidNetworking.post(URLS.cart)
                 .addBodyParameter("user_id",user_id)
@@ -107,13 +116,13 @@ public void setUpClick()
                 .getAsJSONObject(new JSONObjectRequestListener(){
                     @Override
                     public void onResponse(JSONObject response) {
+                        dialog.dismiss();
                         // do anything with response
                         try {
                             String success = response.getString("success");
                             if (success.equals("1")){
                                  total = response.getString("total");
                                 price.setText(total);
-
                                 JSONArray categores = response.getJSONArray("products");
                                 if (categores.length()==0){
 
@@ -175,7 +184,7 @@ public void setUpClick()
                                 initSwipe();
                             }
                         } catch (JSONException e) {
-
+                            dialog.dismiss();
                         }
 
                     }
@@ -208,6 +217,12 @@ public void setUpClick()
                     addTopasket(productId,trader_id);
                     faqModels.remove(positionn);
                     adapter.notifyItemRemoved(positionn);
+
+                    String pricee = requestsModel.getPrice();
+                    String realPrice = price.getText().toString();
+                    Integer newPrice = Integer.parseInt(realPrice) - Integer.parseInt(pricee);
+                    price.setText(""+newPrice);
+
                     if (faqModels.size()==0){
                         ripple_confirm.setVisibility(View.GONE);
                         totle.setVisibility(View.GONE);

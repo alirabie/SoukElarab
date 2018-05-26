@@ -93,6 +93,14 @@ public class NavigationDrawer extends Fragment {
                 tv.setText("طلباتى");
             }
         });
+        massages.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,new  AllChateFragemt()).commit();
+                mDrawerLayout.closeDrawer(Gravity.START);
+                tv.setText("الرسائل");
+            }
+        });
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

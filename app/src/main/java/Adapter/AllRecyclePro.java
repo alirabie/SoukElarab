@@ -41,8 +41,8 @@ import souk.arab.com.soukelarab.R;
 
 public class AllRecyclePro extends RecyclerView.Adapter<AllRecyclePro.ViewHolder> {
 
-    private final SharedPreferences preferencesid;
-    private final String user_id;
+    private SharedPreferences preferencesid;
+    private String user_id;
     OnItemClickListener onItemClickListener;
     public static   int num;
     Context context;
@@ -55,19 +55,22 @@ public class AllRecyclePro extends RecyclerView.Adapter<AllRecyclePro.ViewHolder
     public AllRecyclePro(Context context, ArrayList<RequestsModel> faqModels) {
         this.context = context;
         this.faqModels = faqModels;
-        AndroidNetworking.initialize(context);
-        preferencesid = context.getSharedPreferences("pref", Context.MODE_PRIVATE);
-        user_id = preferencesid.getString("user_id","0000");
+
+
     }
     public interface OnItemClickListener {
         void onclick(int position);
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        preferencesid = context.getSharedPreferences("pref", Context.MODE_PRIVATE);
+        user_id = preferencesid.getString("user_id","0000");
+        AndroidNetworking.initialize(context);
         return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.all_pro, parent, false));
     }
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
+
       final RequestsModel faqModel = faqModels.get(position);
         if (faqModel.getFav()==0){
             holder.like.setImageResource(R.drawable.im1);

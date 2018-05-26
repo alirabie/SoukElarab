@@ -28,6 +28,8 @@ import Adapter.ClientOrderAdapterrr;
 import Model.ClientOrderModel;
 import Model.RequestsModel;
 import URLS.URLS;
+import cc.cloudist.acplibrary.ACProgressConstant;
+import cc.cloudist.acplibrary.ACProgressFlower;
 import souk.arab.com.soukelarab.R;
 
 /**
@@ -40,6 +42,7 @@ ArrayList<ClientOrderModel>faqModels;
     private RecyclerView order_list;
     private SharedPreferences preferencesid;
     private String user_id;
+    private ACProgressFlower dialog;
 
 
     public ClientOrderList() {
@@ -64,6 +67,11 @@ ArrayList<ClientOrderModel>faqModels;
         faqModels=new ArrayList<>();
     }
     public void getMyOrder(){
+        dialog = new ACProgressFlower.Builder(getActivity())
+                .direction(ACProgressConstant.DIRECT_CLOCKWISE)
+                .themeColor(getResources().getColor(R.color.colorAccent))
+                .fadeColor(getResources().getColor(R.color.colorAccent)).build();
+        dialog.show();
         faqModels.clear();
         AndroidNetworking.post(URLS.myOrder)
                 .addBodyParameter("user_id",user_id)
@@ -73,10 +81,10 @@ ArrayList<ClientOrderModel>faqModels;
                     @Override
                     public void onResponse(JSONObject response) {
                         // do anything with response
+                        dialog.dismiss();
                         try {
                             String success = response.getString("success");
                             if (success.equals("1")){
-
                                 JSONArray orders = response.getJSONArray("orders");
                                 if (orders.length()==0){
                                     Toast.makeText(getActivity(), "لأ يوجد منتجات حالية", Toast.LENGTH_SHORT).show();
@@ -90,10 +98,12 @@ ArrayList<ClientOrderModel>faqModels;
                                         String product_description = jsonObject.getString("product_description");
                                         String product_rate = jsonObject.getString("product_rate");
                                         String product_price = jsonObject.getString("product_price");
+                                        String order_status = jsonObject.getString("order_status");
 
                                         //  int fav = jsonObject.getInt("fav");
 
                                         latest.setNumber(order_qty);
+                                        latest.setOrder_status(order_status);
                                         latest.setName(product_name);
                                         latest.setImage(product_image);
                                         latest.setPrice(product_price);
@@ -109,7 +119,7 @@ ArrayList<ClientOrderModel>faqModels;
                                 order_list.setAdapter(adapter);
                             }
                         } catch (JSONException e) {
-
+                            dialog.dismiss();
                         }
 
                     }

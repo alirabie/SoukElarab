@@ -57,6 +57,7 @@ public class codeActivity extends AppCompatActivity implements View.OnClickListe
     private SharedPreferences preferencesid;
     private String user_id;
     private String rosa;
+    private SharedPreferences.Editor editid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,12 +67,16 @@ public class codeActivity extends AppCompatActivity implements View.OnClickListe
         rosa="null";
         preferencesid = codeActivity.this.getSharedPreferences("pref", Context.MODE_PRIVATE);
         user_id = preferencesid.getString("user_id","0000");
-        type = getIntent().getExtras().getInt("type");
+        if(getIntent().getExtras().getInt("type")+""!=null){
+            type = getIntent().getExtras().getInt("type");
+        }
+
+
         ripple_confirm =(LinearLayout)findViewById(R.id.ripple_confirm);
         input_code =(Custom_EditText) findViewById(R.id.input_code);
         txt_signin =(TextView) findViewById(R.id.txt_signin);
         ripple_confirm.setOnClickListener(this);
-
+        editid = preferencesid.edit();
 //        dialogBuilder = NiftyDialogBuilder.getInstance(codeActivity.this);
 //        dialogBuilder
 //                .withDuration(500).withTitle("تم انشاء الحساب بنجاح")                                       //def
@@ -133,8 +138,8 @@ public class codeActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.makeText(codeActivity.this, "من فضلك قم باختيار الصورة الشخصية", Toast.LENGTH_SHORT).show();
                     }else {
                         UploadImage();
-                        Intent intent=new Intent(codeActivity.this,ClinetHomePage.class);
-                        startActivity(intent);
+//                        Intent intent=new Intent(codeActivity.this,ClinetHomePage.class);
+//                        startActivity(intent);
                     }
 
                 }
@@ -144,8 +149,8 @@ public class codeActivity extends AppCompatActivity implements View.OnClickListe
                     }
                     else {
                         UploadImage();
-                        Intent intent=new Intent(codeActivity.this,addSupplierPicDelivery.class);
-                        startActivity(intent);
+//                        Intent intent=new Intent(codeActivity.this,addSupplierPicDelivery.class);
+//                        startActivity(intent);
                     }
 
                 }
@@ -175,11 +180,13 @@ public class codeActivity extends AppCompatActivity implements View.OnClickListe
                         try {
                             String success = response.getString("success");
                             if(success.equals("1")){
+                                editid.putString("code","1");
+                                editid.commit();
 
                               setDiloge();
                             }
                             else if(success.equals("0")){
-                                setDiloge();
+
                                 Toast.makeText(codeActivity.this, "كود التحقيق غير صحيح", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
@@ -222,7 +229,17 @@ public class codeActivity extends AppCompatActivity implements View.OnClickListe
                         try {
                             String success = response.getString("success");
                             if(success.equals("1")){
+
+
                                 Toast.makeText(codeActivity.this, "تم تحميل الصورة الشخصية بنجاح", Toast.LENGTH_SHORT).show();
+                                if (type==2){
+                                    Intent intent=new Intent(codeActivity.this,addSupplierPicDelivery.class);
+                                  startActivity(intent);
+                                }
+                                if (type==2){
+                                    Intent intent=new Intent(codeActivity.this,ClinetHomePage.class);
+                                    startActivity(intent);
+                                }
                             }
                         } catch (JSONException e) {
                         }

@@ -10,7 +10,6 @@
 
     android:orientation="vertical"
     tools:context="souk.arab.com.soukelarab.ClinetHomePage">
-
     <RelativeLayout
         android:layoutDirection="rtl"
         android:background="#d6d6d6"
@@ -67,7 +66,6 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-
             android:layout_height="70dp"
             android:layout_marginLeft="10dp"
             android:orientation="horizontal"
@@ -81,7 +79,8 @@
                 android:gravity="center"
                 android:orientation="horizontal">
                 <ConstantClasss.Custom_EditText
-                    android:text="البحث"
+                    android:id="@+id/editSearch"
+                    android:hint="البحث"
                     android:textSize="13sp"
                     android:textAlignment="center"
                     android:background="@drawable/edittbg"
@@ -96,7 +95,6 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:background="@drawable/filter_shap">
-
                 <ImageView
                     android:layout_gravity="center"
                     android:layout_width="25dp"

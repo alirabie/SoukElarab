@@ -69,7 +69,7 @@ ObjectAnimator anim,anim2,anim3;
                 startActivity(new Intent(RegisterActivity.this,RegisterDelivery.class));
                 break;
             case R.id.ripple_servant:
-                Intent intentt=new Intent(RegisterActivity.this,LoginClientActivity.class);
+                Intent intentt=new Intent(RegisterActivity.this,registersupplierActivity.class);
                 intentt.putExtra("type",2);
                 startActivity(intentt);
                 break;

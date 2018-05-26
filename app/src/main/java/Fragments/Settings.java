@@ -109,9 +109,9 @@ public class Settings extends Fragment {
         dialog.show();
         AndroidNetworking.post(URLS.updateProfi)
                 .addBodyParameter("user_id",user_id)
-                .addBodyParameter("phone",input_email.getText().toString())
+                .addBodyParameter("phone",input_phone.getText().toString())
                 .addBodyParameter("password",input_password.getText().toString())
-                .addBodyParameter("username",input_phone.getText().toString())
+                .addBodyParameter("username",input_email.getText().toString())
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {

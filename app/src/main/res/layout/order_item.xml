@@ -55,7 +55,23 @@
                     android:layout_marginLeft="2dp"
                     android:text="لاب ينوفو جديد عالى الجوده من حيث الرمات والبروسيسور حيث يحتوى على رمات عاليه الجودة بمواصفات عاليه جدا "
                     android:textColor="#a1a1a1"
-                    android:textSize="8sp"
+                    android:textSize="10sp"
+                    />
+
+                <ConstantClasss.Custom_Textview
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/status"
+                    android:layout_gravity="end"
+                    android:maxWidth="270dp"
+                    android:maxHeight="300dp"
+                    android:layout_marginBottom="2dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="الحالة : "
+                    android:textColor="#a1a1a1"
+                    android:textSize="12sp"
                     />
                 <com.whinc.widget.ratingbar.RatingBar
                     android:id="@+id/ratingBar"

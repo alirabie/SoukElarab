@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".Chat">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_weight="20"
         android:layout_height="wrap_content"
@@ -16,15 +16,15 @@
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/layout2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/layout1">
-            </LinearLayout>
+            android:layout_height="match_parent">
+          <android.support.v7.widget.RecyclerView
+              android:id="@+id/recy_chat"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          </android.support.v7.widget.RecyclerView>
         </RelativeLayout>
-    </ScrollView>
+    </LinearLayout>
 
     <include
         layout="@layout/message_area"
@@ -32,4 +32,6 @@
         android:layout_height="wrap_content"
         android:gravity="bottom"
         android:layout_marginTop="5dp"/>
+
+
 </LinearLayout>

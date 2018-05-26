@@ -1,5 +1,6 @@
 package souk.arab.com.soukelarab;
 
+import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
@@ -15,17 +16,32 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import Adapter.CardAdapter;
+import Adapter.DriverAdapter;
 import Adapter.NotiicationAdapter;
+import ConstantClasss.Constanturl;
+
+import Model.Drivers;
+import Model.Notifications;
+import Model.Notus;
 import Model.RequestsModel;
+import Presenter.Idealinterface;
+import cc.cloudist.acplibrary.ACProgressConstant;
+import cc.cloudist.acplibrary.ACProgressFlower;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class RecycleNotifcation  extends DialogFragment {
 
 
     private View view;
     private RecyclerView recyanim;
-    private ArrayList<RequestsModel> faqModels;
+    ArrayList<Notus> faqModels;
+    ACProgressFlower dialog;
 
 
     @Nullable
@@ -53,19 +69,55 @@ public class RecycleNotifcation  extends DialogFragment {
 //        layoutParams.x = 100; // left margin
 //        layoutParams.y = 170; // bottom margin
 //        getDialog().getWindow().setAttributes(layoutParams);
-
-
-
         getDialog().getWindow().getAttributes().windowAnimations= R.style.dialog_slide_animation;
-
         setUpAll();
+        getNotifications(1);
         return view;
 }
     public void setUpAll(){
         recyanim =(RecyclerView)view.findViewById(R.id.recyanim);
 
-        NotiicationAdapter adapter = new NotiicationAdapter(getActivity(),faqModels);
-        recyanim.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-        recyanim.setAdapter(adapter);
+
+    }
+    public void getNotifications(int id) {
+        if (dialog == null) {
+            dialog =  new ACProgressFlower.Builder(getActivity())
+                    .direction(ACProgressConstant.DIRECT_CLOCKWISE)
+                    .themeColor(Color.WHITE)
+                    .fadeColor(Color.DKGRAY).build();
+        }
+        dialog.show();
+        HashMap input=new HashMap();
+        input.put("matjar_id", id);
+        // Log.e("inpp", input + "");
+        Constanturl.createService(Idealinterface.class).getNotifications(input).enqueue(new Callback<Notifications>() {
+            @Override
+            public void onResponse(Call<Notifications> call, Response<Notifications> response) {
+                if (dialog.isShowing())
+                    dialog.dismiss();
+                if (response.isSuccessful()) {
+                    faqModels = response.body().getNoti();
+                    if (faqModels.size()==0){
+
+                    }else {
+                        NotiicationAdapter adapter = new NotiicationAdapter(getActivity(),faqModels);
+                        recyanim.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+                        recyanim.setAdapter(adapter);
+                    }
+
+
+                } else {
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Notifications> call, Throwable t) {
+                if (dialog.isShowing())
+                    dialog.dismiss();
+                // Log.e("ERROrss", "ASMAA");
+            }
+
+        });
     }
     }

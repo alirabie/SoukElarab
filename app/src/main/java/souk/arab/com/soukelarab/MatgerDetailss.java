@@ -52,6 +52,8 @@ public class MatgerDetailss extends AppCompatActivity {
     private String user_id;
     private String shope_phone;
     ImageView call,chate;
+    private String shope_logo;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +64,7 @@ public class MatgerDetailss extends AppCompatActivity {
         user_id = preferencesid.getString("user_id", "0000");
         matgerId = "";
         matgerId = getIntent().getExtras().getString("matgerId");
+
         faqModels = new ArrayList<>();
         ques_image = findViewById(R.id.ques_image);
         chate = findViewById(R.id.chate);
@@ -105,7 +108,7 @@ public class MatgerDetailss extends AppCompatActivity {
                                 JSONObject matjar_info = response.getJSONObject("matjar_info");
                                 String trader_id = matjar_info.getString("trader_id");
                                 String shope_name = matjar_info.getString("shope_name");
-                                String shope_logo = matjar_info.getString("shope_logo");
+                                 shope_logo = matjar_info.getString("shope_logo");
                                 String address = matjar_info.getString("address");
                                 shope_phone = matjar_info.getString("shope_phone");
                                 String trader_info = matjar_info.getString("trader_info");
@@ -164,24 +167,40 @@ public class MatgerDetailss extends AppCompatActivity {
     }
 
     public void setCall() {
+//        call.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                String uri = "tel:" + shope_phone.trim();
+//                Intent intent = new Intent(Intent.ACTION_CALL);
+//                intent.setData(Uri.parse(uri));
+//                if (ActivityCompat.checkSelfPermission(MatgerDetailss.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+//                    return;
+//                }
+//                startActivity(intent);
+//            }
+//        });
+
         call.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String uri = "tel:" + shope_phone.trim();
-                Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse(uri));
-                if (ActivityCompat.checkSelfPermission(MatgerDetailss.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            public void onClick(View arg0) {
+                String uri = "tel:"+shope_phone.trim();
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse(uri));
+
+                if (ActivityCompat.checkSelfPermission(MatgerDetailss.this,
+                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     return;
                 }
-                startActivity(intent);
+                startActivity(callIntent);
             }
         });
+
         chate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MatgerDetailss.this,Chat.class);
                 intent.putExtra("userId",user_id);
                 intent.putExtra("matgerId",matgerId);
+                intent.putExtra("photo",shope_logo);
                 startActivity(intent);
             }
         });
