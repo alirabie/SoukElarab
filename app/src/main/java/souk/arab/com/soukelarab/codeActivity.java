@@ -49,8 +49,8 @@ public class codeActivity extends AppCompatActivity implements View.OnClickListe
     NiftyDialogBuilder dialogBuilder;
     ImageView img_addpic;
     Custom_Textview txt_addpic,txt_skip;
-    TextView txt_signin;
-    LinearLayout ripple_add;
+    TextView txt_resend;
+    LinearLayout ripple_add,ripple_home;
     private int type;
     private ACProgressFlower dialog;
     Custom_EditText input_code;
@@ -74,7 +74,7 @@ public class codeActivity extends AppCompatActivity implements View.OnClickListe
 
         ripple_confirm =(LinearLayout)findViewById(R.id.ripple_confirm);
         input_code =(Custom_EditText) findViewById(R.id.input_code);
-        txt_signin =(TextView) findViewById(R.id.txt_signin);
+        txt_resend =(TextView) findViewById(R.id.txt_resend);
         ripple_confirm.setOnClickListener(this);
         editid = preferencesid.edit();
 //        dialogBuilder = NiftyDialogBuilder.getInstance(codeActivity.this);
@@ -84,10 +84,10 @@ public class codeActivity extends AppCompatActivity implements View.OnClickListe
 //                .isCancelableOnTouchOutside(false)                           //def    | isCancelable(true)
 //                .setCustomView(R.layout.layout_registerdsuccess, this)
 //                ;
-        txt_signin.setOnClickListener(new View.OnClickListener() {
+        txt_resend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                resend();
             }
         });
 
@@ -98,12 +98,44 @@ public class codeActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.ripple_confirm:
                 if (validation()){
+                    setDilogedone();
                     code();
                 }
 
                 break;
         }
     }
+
+
+
+    public void setDilogedone(){
+        DialogPlus dialog = DialogPlus.newDialog(this)
+                .setContentHolder(new ViewHolder(R.layout.done))
+                .setExpanded(true)
+                // This will enable the expand feature, (similar to android L share dialog)
+                .setContentWidth(ViewGroup.LayoutParams.WRAP_CONTENT)  // or any custom width ie: 300
+                .setContentBackgroundResource(R.drawable.lin_shap)
+                .setExpanded(true, 1000)
+                .setGravity(Gravity.CENTER)
+                .setMargin(10,10,10,10)
+                .create();
+
+        ripple_home =(LinearLayout)dialog.findViewById(R.id.ripple_home);
+        ripple_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               startActivity(new Intent(codeActivity.this,StoreHome.class));
+               codeActivity.this.finish();
+
+            }
+        });
+        dialog.show();
+    }
+
+
+
+
+    //This is old dialog not used yet ..... !
     public void setDiloge(){
         DialogPlus dialog = DialogPlus.newDialog(this)
                 .setContentHolder(new ViewHolder(R.layout.layout_registerdsuccess))
@@ -160,6 +192,51 @@ public class codeActivity extends AppCompatActivity implements View.OnClickListe
         dialog.show();
     }
 
+
+
+    //resend Code again
+    public void resend(){
+        AndroidNetworking.post("http://market.wildso.com/public/api/replay_sms")
+                .setPriority(Priority.HIGH)
+                .build()
+                .getAsJSONObject(new JSONObjectRequestListener() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        // do anything with response
+
+                        try {
+                            String success = response.getString("success");
+                            if(success.equals("1")){
+                                Toast.makeText(codeActivity.this, "تم إرسال كود التحقيق مرة أخرى", Toast.LENGTH_SHORT).show();
+                            }
+
+                        } catch (JSONException e) {
+
+                        }
+
+                    }
+                    @Override
+                    public void onError(ANError error) {
+                        // handle error
+                    }
+                });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public void code(){
         dialog = new ACProgressFlower.Builder(codeActivity.this)
                 .direction(ACProgressConstant.DIRECT_CLOCKWISE)
@@ -182,8 +259,7 @@ public class codeActivity extends AppCompatActivity implements View.OnClickListe
                             if(success.equals("1")){
                                 editid.putString("code","1");
                                 editid.commit();
-
-                              setDiloge();
+                                setDilogedone();
                             }
                             else if(success.equals("0")){
 

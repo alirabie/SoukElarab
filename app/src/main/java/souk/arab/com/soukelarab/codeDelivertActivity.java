@@ -107,7 +107,6 @@ LinearLayout ripple_confirm;
     }
     public void resend(){
         AndroidNetworking.post("http://market.wildso.com/public/api/replay_sms")
-
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {

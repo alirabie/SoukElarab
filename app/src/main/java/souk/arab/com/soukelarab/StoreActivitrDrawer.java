@@ -89,7 +89,7 @@ public class StoreActivitrDrawer extends AppCompatActivity implements View.OnCli
         relprofile = (com.andexert.library.RippleView) findViewById(R.id.relprofile);
         // rel_careers = (com.andexert.library.RippleView) findViewById(R.id.rel_careers);
         rel_ideal = (com.andexert.library.RippleView) findViewById(R.id.rel_ideal);
-        rel_service = (com.andexert.library.RippleView) findViewById(R.id.rel_service);
+
     }
 
     public void set_action_bar() {

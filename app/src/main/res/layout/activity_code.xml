@@ -83,16 +83,17 @@
             android:textColor="@android:color/white"
             />
     </LinearLayout>
+
     <ConstantClasss.Custom_Textview
         android:id="@+id/txt_resend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/ripple_confirm"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:textSize="13sp"
         android:text="أعادة إرسال كود التفعيل"
         android:textColor="@android:color/white"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textSize="13sp" />
     <TextView
         android:layout_width="130dp"
         android:layout_centerHorizontal="true"

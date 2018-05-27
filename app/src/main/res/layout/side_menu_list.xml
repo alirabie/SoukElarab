@@ -79,32 +79,12 @@
             android:id="@+id/txt_ideal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:text="مندوب التوصيل"
             android:layout_alignParentRight="true"
-            android:textColor="@color/wite"
-            android:textStyle="bold"
-            android:textSize="16dp" />
-
-    </com.andexert.library.RippleView>
-    <com.andexert.library.RippleView
-        android:id="@+id/rel_service"
-        android:layout_width="270dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rel_ideal"
-        android:layout_alignParentRight="true"
-        android:padding="10dp"
-        rv_centered="true">
-        <ConstantClasss.Custom_Textview
-            android:id="@+id/txt_service"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
-            android:text="إعدادات المتجر"
-            android:layout_alignParentRight="true"
+            android:text="الطلبات"
             android:textColor="@color/wite"
-            android:textStyle="bold"
-            android:textSize="16dp" />
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
     </com.andexert.library.RippleView>
 </RelativeLayout>

@@ -10,7 +10,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linn"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -48,7 +57,9 @@
                 android:textColor="@android:color/white"
                 android:textSize="13sp"
                 android:textStyle="bold" />
+
         </LinearLayout>
+
         <RelativeLayout
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
@@ -103,12 +114,9 @@
             android:text="متجر الكترونى لصيانه الاجهزه وبيع الموبيلات الحديثه "
             android:layout_height="wrap_content"/>
     </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-    </LinearLayout>
-        <View
+
+            <View
 
     android:id="@+id/divider"
     android:background="@drawable/shadow"
@@ -237,6 +245,8 @@
         </LinearLayout>
     </LinearLayout>
     </RelativeLayout>
+
+
     <fragment
         android:id="@+id/nv_fragment"
         android:name="Fragments.NavigationStore"
@@ -244,5 +254,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:layout="@layout/fragment_navigation_store"
-        tools:layout="@layout/fragment_navigation_store" />
+        tools:layout="@layout/fragment_navigation_store">
+
+    </fragment>
+
 </android.support.v4.widget.DrawerLayout>
